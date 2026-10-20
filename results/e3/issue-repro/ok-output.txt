@@ -1,0 +1,4 @@
+Thought: I should call the tool.
+Action: counter
+Action Input: {}
+elapsed_s 0.4
