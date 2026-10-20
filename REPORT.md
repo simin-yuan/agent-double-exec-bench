@@ -73,7 +73,7 @@ Defaults everywhere, no wait constant shrunk; 25-min cap per cell; whole matrix 
 | 4 | CrewAI: 27 requests per 429 (3 SDK × 3 `llms/retry.py` × 3 agent), 9 for 429-hard and neutral 500, 27 for a 500 saying "Rate limit". | `crewai/429`, `crewai/429-hard`, `crewai/500-neutral`, `crewai/500-ratelimit-text` |
 | 5 | CrewAI's middle retry layer does not honor Retry-After on OpenAI SDK errors (gaps 1.0–1.3 s, 1.7–2.4 s; RA 3600 retried). | `outer_gaps` of `crewai/*` in `cells.json`; `crewai/llms/retry.py` `_retry_after_seconds` (dict headers only) |
 | 6 | Agents SDK, LangGraph, Pydantic AI, ADK: 3 requests for 429/500/drop, 1 for 429 with Retry-After 3600. | `agents-*/`, `langgraph/`, `pydantic-ai/`, `adk/` |
-| 7 | The OpenAI SDK layer honors Retry-After (1.00–1.06 s gaps for RA 1; no retry for RA 3600 > 60 s). | `inner_gaps` in `cells.json`; `openai/_base_client.py` `_should_retry` |
+| 7 | The OpenAI SDK layer honors Retry-After (1.00–1.06 s gaps for RA 1; no retry for RA 3600, above `MAX_RETRY_AFTER_DELAY` = 120 s; Round 1 wrote 60 s — corrected). | `inner_gaps` in `cells.json`; `openai/_base_client.py` `_should_retry` |
 | 8 | smolagents: 9 requests for 429 (680 s OpenAI / 872 s LiteLLM to error) — E0's count of 9 reproduced with full default waits. | `smol-openai/429`, `smol-litellm/429` |
 | 9 | smolagents retries a quota 429 (RA 3600) for 591 s although the SDK declined to. | `smol-openai/429-hard` |
 | 10 | smolagents retries an unrelated 500 whose text contains "429": 9 requests, 500–621 s. | `smol-*/500-text-429` |

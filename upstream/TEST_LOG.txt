@@ -1,0 +1,71 @@
+# TEST_LOG — smolagents fix (option A): client retries on the first attempt only, max_retries=0 on retryer replays
+# Clone: upstream/smolagents, huggingface/smolagents main @ 96f33faaf028479119ec8d34507b47694cf14e34
+# Env: Python 3.12.3, pip 24.0 uv venv $VENV with: uv pip install -e ".[dev]"; openai 2.54.0, ruff 0.17.1, pytest 9.1.1
+# Date: 2026-10-20T08:05:43Z
+
+## 0. Baseline on unmodified main
+$ make quality
+ruff check examples src tests
+All checks passed!
+ruff format --check examples src tests
+77 files already formatted
+exit=0
+(full baseline 'pytest ./tests/' on unmodified main, run earlier the same day: 954 passed, 68 skipped, 57 warnings in 127.11s, exit=0)
+
+## 1. New tests only (no source change): must FAIL
+$ git apply --include=tests/test_models.py ../smolagents-fix.patch
+exit=0
+$ git diff --stat
+ tests/test_models.py | 64 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 64 insertions(+)
+$ python -m pytest tests/test_models.py -p no:cacheprovider -q -k 'retry_replays or first_attempt_keeps'
+E               Exception: Error code: 429 - Rate limit exceeded
+E               Exception: Error code: 429 - Rate limit exceeded
+FAILED tests/test_models.py::TestOpenAIModel::test_retry_replays_disable_client_retries
+FAILED tests/test_models.py::TestOpenAIModel::test_retry_replays_disable_client_retries_stream
+================= 2 failed, 1 passed, 120 deselected in 1.92s ==================
+exit=1
+
+## 2. Apply the source change: must PASS
+$ git apply --include=src/smolagents/models.py ../smolagents-fix.patch
+exit=0
+$ git diff --stat
+ src/smolagents/models.py | 24 +++++++++++++++---
+ tests/test_models.py     | 64 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 85 insertions(+), 3 deletions(-)
+$ python -m pytest tests/test_models.py -p no:cacheprovider -q -k 'retry_replays or first_attempt_keeps' -rA
+PASSED tests/test_models.py::TestOpenAIModel::test_retry_replays_disable_client_retries
+PASSED tests/test_models.py::TestOpenAIModel::test_retry_replays_disable_client_retries_stream
+PASSED tests/test_models.py::TestOpenAIModel::test_first_attempt_keeps_client_retries
+====================== 3 passed, 120 deselected in 0.79s =======================
+exit=0
+
+## 3. Repo checks with the patch: make quality, make test
+$ make quality
+ruff check examples src tests
+All checks passed!
+ruff format --check examples src tests
+77 files already formatted
+exit=0
+$ make test   (= pytest ./tests/), summary lines
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+tests/test_models.py::TestLiteLLMModel::test_retry_on_rate_limit_error PASSED
+tests/test_models.py::TestOpenAIModel::test_client_kwargs_passed_correctly PASSED
+tests/test_models.py::TestAzureOpenAIModel::test_client_kwargs_passed_correctly PASSED
+tests/test_monitoring.py::MonitoringTester::test_code_agent_metrics_generation_error PASSED
+tests/test_monitoring.py::MonitoringTester::test_streaming_with_agent_error PASSED
+tests/test_remote_executors.py::TestDockerExecutorIntegration::test_syntax_error_handling SKIPPED
+tests/test_remote_executors.py::TestModalExecutorIntegration::test_syntax_error_handling SKIPPED
+tests/test_tools.py::TestTool::test_saving_tool_raises_error_imports_outside_function PASSED
+tests/test_tools.py::TestTool::test_tool_definition_raises_no_error_imports_in_function PASSED
+tests/test_tools.py::TestTool::test_tool_missing_class_attributes_raises_error PASSED
+tests/test_tools.py::TestTool::test_tool_mismatching_nullable_args_raises_error PASSED
+tests/test_utils.py::test_get_source_ipython_errors_empty_cells PASSED
+tests/test_utils.py::test_get_source_ipython_errors_definition_not_found PASSED
+tests/test_utils.py::test_get_source_ipython_errors_type_error PASSED
+=========== 957 passed, 68 skipped, 57 warnings in 70.88s (0:01:10) ============
+exit=0

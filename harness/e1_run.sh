@@ -3,11 +3,12 @@
 # Starts a fresh fault_server.py on a free port, runs e1_client.py with VENV's python from an empty directory,
 # caps the client at CAP seconds (env, default 1500 = 25 min), and keeps in results/e1/FRAMEWORK[-stream]/MODE/:
 #   server.jsonl (source of truth), client.txt (client stdout+stderr, exit code, wall time), counter.txt (tool side effect).
+# Env OUTBASE overrides results/e1 and ROW_NAME the row directory (used for the E3 before/after runs).
 VENV=$1; FW=$2; MODE=$3; ST=${4:-}
 CAP=${CAP:-1500}
 HERE=$(cd "$(dirname "$0")/.." && pwd)
-ROW=$FW; [ "$ST" = stream ] && ROW=$FW-stream
-OUT="$HERE/results/e1/$ROW/$MODE"; rm -rf "$OUT"; mkdir -p "$OUT/work"
+ROW=${ROW_NAME:-$FW}; [ "$ST" = stream ] && ROW=$ROW-stream
+OUT="${OUTBASE:-$HERE/results/e1}/$ROW/$MODE"; rm -rf "$OUT"; mkdir -p "$OUT/work"
 PORT=$(python3 -c 'import socket;s=socket.socket();s.bind(("127.0.0.1",0));print(s.getsockname()[1])')
 python3 "$HERE/harness/fault_server.py" "$PORT" "$MODE" "$OUT/server.jsonl" & SP=$!
 sleep 0.5
