@@ -17,16 +17,36 @@ model = OpenAIModel(model_id="any", api_base="http://127.0.0.1:PORT/v1", api_key
 model.generate([{"role": "user", "content": [{"type": "text", "text": "hi"}]}])
 ```
 
-Measured with a local fake server (smolagents main @ 96f33fa, openai 2.54.0, Python 3.13, default settings):
+Measured with a local fake server that answers every request with the fault (smolagents main @ 96f33fa, unpatched
+vs. with the proposed change; openai 2.54.0; Python 3.13; a `ToolCallingAgent` run with default settings):
 
-| fault (every request) | requests now | wall time to error now | with the proposed change |
+| fault (every request) | requests now | wall time to error now | with the proposed change (requests / wall time) |
 |---|---|---|---|
-| 429, Retry-After: 1 | TBD | TBD | TBD |
-| 500 | TBD | TBD | TBD |
-| connection dropped mid-body | TBD | TBD | TBD |
-| no answer (timeout) | TBD | TBD | TBD |
+| 429, Retry-After: 1 | 9 | 835.2 s | 5 / 600.5 s |
+| 500 | 3 | 15.6 s | 3 / 16.6 s |
+| connection dropped mid-body | 3 | 15.7 s | 3 / 16.7 s |
+| no answer (timeout) | 3 | 1815.8 s | 3 / 1817.0 s |
 
-Wall time includes ~1 s of start-up; 429 wall times vary run to run because the outer waits are jittered.
+Wall time = client start to the exception. About 15 s of every value is interpreter start-up: twelve runs started
+at once, and the first request reached the server 14.7–15.8 s after it started. The 429 times vary run to run
+because the retryer's waits are jittered. The 3 requests in the 500, drop and timeout rows are the client's own
+retries (`x-stainless-retry-count` 0, 1, 2); the retryer does not retry those errors, so they are unchanged.
+
+Evidence for each cell (paths in the measurement repository, not part of the issue):
+
+| cell | before (unpatched) | after (patched) |
+|---|---|---|
+| 429 | `results/e3/before/429/` | `results/e3/after/429/` |
+| 500 | `results/e3/before/500-neutral/` | `results/e3/after/500-neutral/` |
+| drop | `results/e3/before/drop/` | `results/e3/after/drop/` |
+| timeout | `results/e3/before/timeout/` | `results/e3/after/timeout/` |
+
+Each directory has `server.jsonl` (requests: one line per request; the timeout logs also have one
+`client_closed_held_connection` line per request, 6 lines for 3 requests) and `client.txt` (`elapsed_s` in the
+`RESULT` line = wall time to the exception).
+
+The plain `model.generate(...)` snippet above, against the same server answering 429 (unpatched main):
+`raised RateLimitError` after 9 requests, `elapsed_s 1063.7`.
 
 ### Proposed change (small, `OpenAIModel` only)
 Keep the client's own retries on the first attempt; on the retryer's replays use

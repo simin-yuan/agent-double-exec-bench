@@ -1,6 +1,143 @@
-# REPORT — E1 done, E3-prep stopped on a problem in TASKS.md (owner decision needed)
+# REPORT
 
-## ⚠ STOP: the E3-prep "minimal fix" in TASKS.md would remove retries smolagents has today
+# Round 2
+
+Owner decisions taken: E3 = option A; CrewAI verified before anything further is written about it. Nothing was opened
+or posted anywhere; no PR was opened or touched.
+
+## R2.1 CrewAI tool re-execution — verified, and ALREADY REPORTED upstream (not a new finding)
+
+**Repro (single file).** `repro/crewai_tool_reexec.py` starts `harness/fault_server.py`, runs one CrewAI agent with
+one `counter` tool, prints the counter, the number of model requests, and pass-through call counts of
+`Agent.execute_task`, `Agent._handle_execution_error` and `AgentExecutor.invoke`. All outputs, verbatim, with the
+command lines: `repro/crewai_tool_reexec.runs.txt` (crewai 1.15.28, openai 2.54.0, Python 3.13.16).
+
+| run | settings | counter (tool runs) | model requests | requests without the tool result | execute_task / _handle_execution_error / invoke |
+|---|---|---|---|---|---|
+| 1 | `after-tool-500`, default (`max_retry_limit`=2) | **3** | 12 | 3 | 3 / 3 / 3 |
+| 2 | same | **3** | 12 | 3 | 3 / 3 / 3 |
+| 3 | same | **3** | 12 | 3 | 3 / 3 / 3 |
+| 4–6 | `after-tool-500`, `max_retry_limit=0` (3 runs) | **1** | 4 | 1 | 1 / 1 / 1 |
+| 7 | `after-tool-drop`, default | 3 | 12 | 3 | 3 / 3 / 3 |
+| 8 | `after-tool-drop`, `max_retry_limit=0` | 1 | 4 | 1 | 1 / 1 / 1 |
+| 9 | `429` (every request), default | 0 | **27** | 27 | 3 / 3 / 3 |
+| 10 | `429`, `max_retry_limit=0` | 0 | **9** | 9 | 1 / 1 / 1 |
+| 11–12 | `ok` (no fault), default / 0 | 1 | 2 | 1 | 1 / 0 / 1 |
+
+Deterministic: 3 of 3 default runs gave 3 tool executions; 3 of 3 with `max_retry_limit=0` gave 1.
+"Requests without the tool result" = 3 shows each restart begins from the task prompt with the earlier tool
+result gone.
+
+**Workaround (d).** `Agent(max_retry_limit=0)` stops the re-execution (runs 4–6, 8) and cuts a 429 from 27 to 9
+requests (run 10). Cost: no agent-level retry of the task at all.
+
+**Source, pinned (b).** Installed files are byte-identical to the tag sources (`diff` of `agent/core.py`,
+`llms/retry.py`, `llms/providers/openai/completion.py`, `agents/crew_agent_executor.py` at tag 1.15.28 commit
+eb15c66, and openai `_base_client.py` at tag v2.54.0, all identical).
+
+27 requests for a 429 = 3 × 3 × 3:
+| layer | what | source |
+|---|---|---|
+| 1. OpenAI SDK (×3) | `DEFAULT_MAX_RETRIES = 2`; retries 429 and ≥500; refuses when Retry-After > `MAX_RETRY_AFTER_DELAY = 2 * 60` | [https://github.com/openai/openai-python/blob/v2.54.0/src/openai/_constants.py#L10](https://github.com/openai/openai-python/blob/v2.54.0/src/openai/_constants.py#L10), [#L15](https://github.com/openai/openai-python/blob/v2.54.0/src/openai/_constants.py#L15); [https://github.com/openai/openai-python/blob/v2.54.0/src/openai/_base_client.py#L821](https://github.com/openai/openai-python/blob/v2.54.0/src/openai/_base_client.py#L821) (`_should_retry`), [#L853](https://github.com/openai/openai-python/blob/v2.54.0/src/openai/_base_client.py#L853) (429), [#L858](https://github.com/openai/openai-python/blob/v2.54.0/src/openai/_base_client.py#L858) (≥500) |
+| 1a. CrewAI passes the SDK retries through | `max_retries: int = 2` → client param | [https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/providers/openai/completion.py#L376](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/providers/openai/completion.py#L376), [#L569](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/providers/openai/completion.py#L569) |
+| 2. CrewAI LLM rate-limit retry (×3) | every `BaseLLM` subclass's `call` is wrapped; 3 attempts; throttling = status 429 or text "rate limit" etc.; Retry-After read only from dict headers (so not from OpenAI SDK errors) | [https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/base_llm.py#L185](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/base_llm.py#L185), [#L189](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/base_llm.py#L189), [#L199](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/base_llm.py#L199); [https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L35](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L35), [#L29](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L29), [#L58](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L58), [#L124](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L124), [#L143](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L143), [#L208](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L208), [#L216](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/llms/retry.py#L216) |
+| 3. Agent task retry (×3) | `max_retry_limit` default 2; any exception in `execute_task` → `_handle_execution_error` → `execute_task` again; exceptions from a `litellm` module are excluded | [https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L302](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L302); [#L1022-L1025](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L1022-L1025); [#L890](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L890), [#L909](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L909); [#L862](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L862), [#L884](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L884), [#L886-L887](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L886-L887) |
+
+Restart and tool re-run: `execute_task` → `_execute_without_timeout`
+([https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L1011](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L1011)) → `self.agent_executor.invoke({"input": task_prompt, ...})`
+([#L1082](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L1082)); default executor is the experimental `AgentExecutor`
+([#L397](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/agent/core.py#L397)), whose `invoke` resets state with `self.state.messages.clear()`
+([https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/experimental/agent_executor.py#L2881](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/experimental/agent_executor.py#L2881)); the model is asked again
+without the tool result and the tool function runs again at
+[https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/experimental/agent_executor.py#L2080](https://github.com/crewAIInc/crewAI/blob/1.15.28/lib/crewai/src/crewai/experimental/agent_executor.py#L2080) (`raw_result = tool_func(**args_dict)`).
+Tool-result caching would not stop it by default: caching is opt-in (`agents/agent_builder/base_agent.py#L262`).
+
+**Documented as intended? (c).** docs.crewai.com/en/concepts/agents: `max_retry_limit` = "Maximum number of retries
+when an error occurs. Default is 2." The page says nothing about tool calls, side effects or conversation history on
+retry. No maintainer statement found either way.
+
+**Existing issues / PRs (c)** (rendered GitHub search pages, searches `max_retry_limit`, `tool executed twice`,
+`tool called multiple times retry`, `idempotency`; full items read for the first five rows):
+| # | type | title | state |
+|---|---|---|---|
+| 5802 | issue | Tool re-execution on task retry has no idempotency guard — duplicate payments, emails, trades possible | **open**, opened 2026-05-14, label `bug` (set by the author); no maintainer reply visible (185 comments not loaded) |
+| 5822 | PR | fix: add idempotency guard for tool re-execution on task retry | open, unmerged (opt-in `idempotent=True` per tool) |
+| 6048 | PR | feat: add tool execution idempotency guard to prevent duplicate side effects on task retry | open, unmerged |
+| 7018 | PR | fix: reset agent retry budget per task (`_times_executed` never reset) | closed unmerged 2026-08-21 (stale) |
+| 7449 | issue | ToolUsage retries a failed tool call twice per outer attempt (different path: the tool itself raises) | open |
+| 7452, 7458 | PR | fixes for #7449 | state not shown |
+| 2881 | issue | Tool Called Multiple Times in CrewAI v0.121.0 | closed 2025-07-04 (not read) |
+| 2294 | issue | [BUG]How to control the number of times a tool is called | closed (not read) |
+| 6744 | PR | Fix MCP connection timeouts and disable tool call retries by default | state not shown (not read) |
+| 7460 | issue | Add configurable retry-with-backoff for tool execution failures | state not shown (not read) |
+
+**Consequence for the headline.** The mechanism is known and open upstream since May 2026. What this repository
+adds is narrower: an independent, deterministic repro where the trigger is a *transient model-API error after a
+successful tool call* (not a tool failure), exact counts (3 tool runs; 27 requests from three stacked layers),
+the line-pinned path, and the `max_retry_limit=0` workaround measured. Not verified here: the claim in #7018 that
+the retry budget is shared across tasks; LiteLLM-backed CrewAI providers (excluded from the agent retry at #L884).
+
+## R2.2 smolagents fix (option A) — built and tested on the local clone, nothing upstream
+
+**Change** (`upstream/smolagents-fix.patch`, 2 files, +85/−3): `OpenAIModel._completions_create()` returns the
+`chat.completions.create` callable for one `retryer` call; attempt 1 uses the client as configured (its own
+retries), the retryer's replays use `client.with_options(max_retries=0)`. Applied in `generate` and
+`generate_stream`; `AzureOpenAIModel` inherits it. `is_rate_limit_error` and status-code detection untouched
+(#2186, #2382 cited in the draft).
+
+**Tests** (`upstream/TEST_LOG.txt`): 3 new tests in `tests/test_models.py::TestOpenAIModel`. With the tests alone:
+2 failed, 1 passed (the guard test). With the source change: 3 passed. `make quality`: clean before and after.
+`make test`: 954 passed / 68 skipped before; 957 passed / 68 skipped after; 0 failed both times.
+
+**Before/after with the fault server** (two clean installs from worktrees of main @ 96f33fa: unpatched vs patched;
+openai 2.54.0; Python 3.13; `e1_client.py smol-openai`, i.e. a default `ToolCallingAgent` run; cap 1900 s).
+Requests = request lines in `server.jsonl`; wall time = `elapsed_s` (client start to the exception) in `client.txt`.
+
+| fault | before: requests / wall | after: requests / wall | evidence |
+|---|---|---|---|
+| 429, Retry-After 1 | 9 (retry hdr 0,1,2 ×3) / 835.2 s | **5** (0,1,2,0,0) / 600.5 s | `results/e3/before/429/`, `results/e3/after/429/` |
+| 500 | 3 / 15.6 s | 3 / 16.6 s | `results/e3/before/500-neutral/`, `results/e3/after/500-neutral/` |
+| drop (non-stream) | 3 / 15.7 s | 3 / 16.7 s | `results/e3/before/drop/`, `results/e3/after/drop/` |
+| timeout | 3 / 1815.8 s | 3 / 1817.0 s | `results/e3/before/timeout/`, `results/e3/after/timeout/` |
+| ok (control) | 2, tool 1 | 2, tool 1 | `results/e3/*/ok/` |
+| after-tool-500 | 4, tool 1 | 4, tool 1 | `results/e3/*/after-tool-500/` |
+
+~15 s of each wall time is start-up (12 runs started together; first request at 14.7–15.8 s). The timeout logs
+have 6 lines each: 3 requests + 3 `client_closed_held_connection` events. 429 wall times are jittered (60·2·(1+U)…).
+
+**Draft issue:** `upstream/ISSUE_DRAFT.md` — plain English, facts, minimal repro, the table above with evidence
+paths, proposed fix, links to #2186/#2382, AI-disclosure line left as a placeholder for the owner.
+**Snippet check (3):** the draft's `model.generate(...)` snippet, run against the 429 server on unpatched main:
+`raised RateLimitError`, 9 requests, `elapsed_s 1063.7`; against the no-fault server it returns the scripted reply
+(1 request). Evidence: `results/e3/issue-repro/` (script, server logs, outputs).
+
+## R2.3 Corrections to Round 1
+- The OpenAI SDK's Retry-After ceiling is `MAX_RETRY_AFTER_DELAY = 2 * 60` = 120 s (openai 2.54.0 and 3.35.1), not
+  60 s as Round 1 wrote (fixed in `results/SUMMARY.md` finding 3 and claim 7 below).
+- `results/SUMMARY.md` finding 1 (CrewAI) now notes that it is already reported upstream (#5802).
+
+## R2 claims → evidence
+| claim | evidence |
+|---|---|
+| CrewAI re-runs the tool 3× (3 of 3 runs) | `repro/crewai_tool_reexec.runs.txt` runs 1–3 |
+| `max_retry_limit=0` → 1 tool run (3 of 3) | same file, runs 4–6, 8 |
+| 27 = 3 × 3 × 3 requests; 9 with `max_retry_limit=0` | runs 9–10; `results/e1/crewai/429/server.jsonl` (retry hdr 0,1,2 per group) |
+| restart path and line numbers | R2.1 table (tag-pinned URLs) |
+| prior art #5802, #5822, #6048 | R2.1 list (rendered pages) |
+| fix: tests fail before / pass after; lint + suite green | `upstream/TEST_LOG.txt` |
+| fix: 429 9 → 5 requests, 500/drop/timeout unchanged | `results/e3/{before,after}/*` |
+| draft snippet raises after 9 requests / 1063.7 s | `results/e3/issue-repro/429-*` |
+
+## Still not done
+- Hermes Agent control: still not run (permission policy, see Round 1).
+- Nothing upstream: no issue, PR, comment or fork anywhere.
+
+---
+
+# Round 1
+E1 done; E3-prep stopped on a problem in TASKS.md (owner decision needed at the time).
+
+## ⚠ STOP (Round 1; resolved in Round 2 — option A chosen): the E3-prep "minimal fix" in TASKS.md would remove retries smolagents has today
 
 TASKS.md asks: *"when the model's own retry is enabled and the user did not pass `max_retries` in client_kwargs,
 create the OpenAI/Azure client with `max_retries=0`"*, citing the Agents SDK as precedent. Two problems, with evidence:

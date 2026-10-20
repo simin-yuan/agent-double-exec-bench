@@ -1,0 +1,1 @@
+{"t": 1.999, "path": "/v1/chat/completions", "scenario": "ok", "action": "tool_call", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "OpenAI/Python 2.54.0", "body_sha": "999218195142", "n_items": 1, "tools_offered": []}
