@@ -41,6 +41,8 @@ Numbers in brackets = client wall time until the error surfaced. Cells without o
 ## Findings (each with its evidence)
 
 1. **CrewAI executes the tool again for every agent-level retry: 3 executions for one persistent fault.**
+   *Round 2: this is already reported upstream — crewAIInc/crewAI#5802 (open, opened 2026-05-14), fix PRs #5822 and
+   #6048 (open). Not a new finding; see REPORT.md "Round 2" for the verified repro, line-pinned sources and workaround.*
    `Agent.max_retry_limit` defaults to 2 and a retry re-enters `execute_task` from the task prompt, so the model is
    asked again *without* the earlier tool result and the tool runs again. Evidence: `results/e1/crewai/after-tool-500/`
    (`counter.txt` 3 lines at 3.1 s, 4.6 s, 6.0 s; `server.jsonl` shows 3 × [tool call, 3 × 500]),
@@ -61,7 +63,7 @@ Numbers in brackets = client wall time until the error surfaced. Cells without o
      LiteLLMModel does **not** (LiteLLM's text "litellm.RateLimitError: RateLimitError: OpenAIException - Slow down,
      please." contains none of "429", "rate limit", "rate_limit", "too many requests") → 3. Evidence: `smol-*/429-neutral-body`
      (exception text in `client.txt`).
-   - Quota exhausted (insufficient_quota, Retry-After 3600): the OpenAI SDK correctly refuses to retry (Retry-After > 60 s),
+   - Quota exhausted (insufficient_quota, Retry-After 3600): the OpenAI SDK correctly refuses to retry (Retry-After above its `MAX_RETRY_AFTER_DELAY` = 120 s; Round 1 said 60 s, corrected in Round 2),
      smolagents' outer loop retries anyway → 3 requests, 591 s before the error surfaces. Evidence: `smol-openai/429-hard`.
    - Outer gaps measured (s): 142–232 before the 2nd outer attempt, consistent with 60·2·(1+U) = 120–240 s; total
      time to error 500–1066 s, consistent with TASKS.md's 6–20 min. Retry-After 1 is ignored by the outer layer.
