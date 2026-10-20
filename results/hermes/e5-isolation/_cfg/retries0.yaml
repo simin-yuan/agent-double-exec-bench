@@ -1,0 +1,2 @@
+agent:
+  api_max_retries: 0
