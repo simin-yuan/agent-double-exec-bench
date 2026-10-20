@@ -1,0 +1,27 @@
+🤖 AI Agent initialized with model: fake-model
+🔗 Using custom base URL: http://127.0.0.1:54846/v1
+🔑 Using API key: sk-fake-...only
+✅ Enabled toolset 'counter': counter
+🚫 Disabled toolset 'onboarding': setup_beat
+🚫 Disabled toolset 'catalog': manage_catalog
+🛠️  Final tool selection (1 tools): counter
+🔎 Tool Search (tier 1): 1 MCP/plugin tools deferred (~42 tokens) behind tool_search/describe/call — catalog listing embedded.
+🛠️  Loaded 3 tools: tool_call, tool_describe, tool_search
+   ✅ Enabled toolsets: counter
+   ❌ Disabled toolsets: onboarding, catalog
+⚠️  Some tools may not work due to missing requirements: ['a2a', 'browser', 'browser-cdp', 'browser-use', 'computer_use', 'discord', 'discord_admin', 'hermes-yuanbao', 'image_gen', 'kanban', 'video', 'video_gen', 'vision', 'x_search']
+📊 Context limit: 256,000 tokens (compress at 75% = 192,000)
+💬 Starting conversation: 'Call the counter tool exactly once, then answer Done.'
+
+🔄 Making API call #1/9223372036854775807...
+   📊 Request size: 2 messages, ~1,539 tokens (~6,156 chars)
+   🔧 Available tools: 3
+⏱️  API call completed in 0.51s
+🤖 Assistant: Thought: I should call the tool.
+Action: counter
+Action Input: {}
+🎉 Conversation completed after 1 OpenAI-compatible API call(s)
+
+RESULT {"framework": "hermes", "stream": true, "exception": null, "final_output": "completed=True api_calls=1 final='Thought: I should call the tool.\\nAction: counter\\nAction Input: {}'", "elapsed_s": 8.33, "tool_executions": 0}
+exit=0
+wall_s=8.92 cap_s=1500

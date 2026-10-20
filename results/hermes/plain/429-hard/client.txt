@@ -1,0 +1,28 @@
+🤖 AI Agent initialized with model: fake-model
+🔗 Using custom base URL: http://127.0.0.1:63430/v1
+🔑 Using API key: sk-fake-...only
+✅ Enabled toolset 'counter': counter
+🚫 Disabled toolset 'onboarding': setup_beat
+🚫 Disabled toolset 'catalog': manage_catalog
+🛠️  Final tool selection (1 tools): counter
+🔎 Tool Search (tier 1): 1 MCP/plugin tools deferred (~42 tokens) behind tool_search/describe/call — catalog listing embedded.
+🛠️  Loaded 3 tools: tool_call, tool_describe, tool_search
+   ✅ Enabled toolsets: counter
+   ❌ Disabled toolsets: onboarding, catalog
+⚠️  Some tools may not work due to missing requirements: ['a2a', 'browser', 'browser-cdp', 'browser-use', 'computer_use', 'discord', 'discord_admin', 'hermes-yuanbao', 'image_gen', 'kanban', 'video', 'video_gen', 'vision', 'x_search']
+📊 Context limit: 256,000 tokens (compress at 75% = 192,000)
+💬 Starting conversation: 'Call the counter tool exactly once, then answer Done.'
+
+🔄 Making API call #1/9223372036854775807...
+   📊 Request size: 2 messages, ~1,532 tokens (~6,128 chars)
+   🔧 Available tools: 3
+🧾 Request debug dump written to: <repo>\results\e1\hermes\429-hard\work\.hermes\sessions\request_dump_20261020_160637_cbb373_20261020_160639_662611.json
+⚠️  Attempt 1/3, not retryable failed: HTTP 429: You exceeded your current quota, please check your plan and billing details.
+❌ OpenRouter rejected the request and retrying won't help: HTTP 429: You exceeded your current quota, please check your plan and billing details.
+   💡 your provider reported that billing, credits, or account entitlement is exhausted for fake-model.
+   💡 Add credits or update billing with that provider, then retry.
+   💡 You can switch providers temporarily with /model <model> --provider <provider>.
+
+RESULT {"framework": "hermes", "stream": false, "exception": null, "final_output": "completed=False api_calls=1 final='Billing or credits exhausted: HTTP 429: You exceeded your current quota, please check your plan and billing details.\\n\\nyour provider reported that billing, credits, or account entitlement is exhausted for fake-model.\\nAdd credits or update billing with that provid", "elapsed_s": 9.17, "tool_executions": 0}
+exit=0
+wall_s=9.77 cap_s=1500
