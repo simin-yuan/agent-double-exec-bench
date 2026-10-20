@@ -99,5 +99,22 @@ NOT a default configuration; this row exists to measure the side effect of the p
 
 Evidence: `results/e1/smol-openai-mr0/*`.
 
+## CrewAI: what the patch actually changes — `results/e3/crewai-before` vs `crewai-after`
+Same harness, same fault server, CrewAI 1.15.28 source at base commit `dec075b5` (before) and at the
+branch head (after). Default CrewAI configuration in both runs; `Retry-After: 1` on the 429 cell.
+
+| mode | before patch | after patch |
+|---|---|---|
+| 429 (Retry-After: 1) | 27 chat requests (`retry_count_hdr` 0 ×9, 1 ×9, 2 ×9) | **15** (0 ×9, 1 ×3, 2 ×3) |
+| 500-neutral | 9 chat requests (0 ×3, 1 ×3, 2 ×3) | 9 (unchanged) |
+
+The 15 is not a formula: it is the request count in the server log. The first attempt keeps the SDK's own
+retries (three attempts, `retry_count_hdr` 0/1/2), and the two rate-limit replays CrewAI makes now send one
+request each instead of three. 500 is untouched because CrewAI never replays a 500 at the model layer, so
+there is no replay for the SDK's retries to stack on.
+
+Evidence: `results/e3/crewai-before/{429,500-neutral}/server.jsonl` and `results/e3/crewai-after/{429,500-neutral}/server.jsonl`
+(`chat/completions` lines only; `/api/show` and disconnect events excluded).
+
 ## Not measured
 - Hermes Agent (control): not run — see REPORT.md.
