@@ -43,7 +43,7 @@ log lines, not requests. A plain `wc -l` will overcount.
 
 ## Upstream
 - smolagents: issue huggingface/smolagents#3034, fix huggingface/smolagents#3036
-- CrewAI: measurements added to crewAIInc/crewAI#7771
+- CrewAI: issue crewAIInc/crewAI#8332, fix crewAIInc/crewAI#8333; measurements added to crewAIInc/crewAI#7771
 - Hermes Agent: measurements added to NousResearch/hermes-agent#140255
 
 ## License
