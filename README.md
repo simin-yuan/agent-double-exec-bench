@@ -41,6 +41,11 @@ Requests are counted from `server.jsonl`, never from client output, and only lin
 count: the Hermes start-up probe (`/api/show`) and the `client_closed_held_connection` events in timeout cells are
 log lines, not requests. A plain `wc -l` will overcount.
 
+## Upstream
+- smolagents: issue huggingface/smolagents#3034, fix huggingface/smolagents#3036
+- CrewAI: measurements added to crewAIInc/crewAI#7771
+- Hermes Agent: measurements added to NousResearch/hermes-agent#140255
+
 ## License
 
 License: MIT, except `upstream/smolagents-fix.patch`, which is a diff against Hugging Face `smolagents`
