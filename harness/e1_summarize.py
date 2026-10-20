@@ -1,4 +1,4 @@
-"""Build results/SUMMARY.md and results/e1/cells.json from results/e1/*/*/ (E1).
+"""Build results/e1/TABLE.md and results/e1/cells.json from results/e1/*/*/ (E1); results/SUMMARY.md quotes them.
 
 Counts come from server.jsonl (written by fault_server.py, the source of truth); tool executions from counter.txt
 (the tool's own side effect); the client's outcome (exception / final output / elapsed) from client.txt.
@@ -64,6 +64,13 @@ def main():
         for mode in sorted(os.listdir(p)):
             cells[f"{row}/{mode}"] = cell(os.path.join(p, mode))
     json.dump(cells, open(os.path.join(ROOT, "cells.json"), "w"), indent=1)
+    lines = ["| cell (row/mode) | requests | per logical call | SDK-retry gaps (s) | gaps of retries above the SDK (s) "
+             "| first→last request (s) | client wall (s) | tool runs | outcome |", "|---|---|---|---|---|---|---|---|---|"]
+    for k, v in cells.items():
+        f = lambda g: ", ".join(f"{x:g}" for x in g) if g else "–"
+        lines.append(f"| {k} | {v['requests']} | {v['per_logical']} | {f(v['inner_gaps'])} | {f(v['outer_gaps'])} | "
+                     f"{v['span_s']} | {v['wall_s']} | {v['tools']} | {v['outcome'].replace('|', '/')} |")
+    open(os.path.join(ROOT, "TABLE.md"), "w").write("\n".join(lines) + "\n")
     if "--print" in sys.argv:
         for k, v in cells.items():
             print(k, json.dumps({x: v[x] for x in ("requests", "per_logical", "inner_gaps", "outer_gaps", "span_s", "tools", "outcome")}))

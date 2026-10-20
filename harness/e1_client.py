@@ -1,7 +1,7 @@
 """Run one agent framework, in its default configuration, against fault_server.py (E1).
 
 usage: python e1_client.py FRAMEWORK PORT WORKDIR [stream]
-FRAMEWORK: agents-chat | agents-responses | langgraph | smol-openai | smol-litellm | crewai | pydantic-ai | adk | hermes
+FRAMEWORK: agents-chat | agents-responses | langgraph | smol-openai | smol-openai-mr0 | smol-litellm | crewai | pydantic-ai | adk | hermes
 (hermes: needs the Hermes Agent checkout on PYTHONPATH; the counter tool is registered in its tool registry.
  This branch was written but NOT run in E1 — see REPORT.md.)
 
@@ -60,6 +60,9 @@ def run():
         from smolagents import ToolCallingAgent, OpenAIServerModel, LiteLLMModel, tool
         if FW == "smol-openai":
             m = OpenAIServerModel(model_id="fake-model", api_base=BASE, api_key=KEY)
+        elif FW == "smol-openai-mr0":
+            # NOT default: the client state the TASKS.md E3 fix would create (inner SDK retries off, outer retry on)
+            m = OpenAIServerModel(model_id="fake-model", api_base=BASE, api_key=KEY, client_kwargs={"max_retries": 0})
         else:
             m = LiteLLMModel(model_id="openai/fake-model", api_base=BASE, api_key=KEY)
         return ToolCallingAgent(tools=[tool(counter)], model=m, stream_outputs=STREAM).run(PROMPT)
