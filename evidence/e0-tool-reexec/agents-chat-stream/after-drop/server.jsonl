@@ -1,0 +1,2 @@
+{"path": "/v1/chat/completions", "scenario": "after-drop", "first_request": true, "tools_offered": ["write_file"], "has_tool_result": false, "tool_result": null, "replayed_args_len": null, "stream": true}
+{"path": "/v1/chat/completions", "scenario": "after-drop", "injected": "after-drop", "has_tool_result": true}

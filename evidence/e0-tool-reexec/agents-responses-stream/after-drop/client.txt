@@ -1,0 +1,3 @@
+
+RESULT {"framework": "agents-responses", "mode": "stream", "exception": "ModelBehaviorError: Model did not produce a final response!", "final_output": null, "trace_tail": ["                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "  File \"/tmp/dv/lib/python3.12/site-packages/agents/run_internal/run_loop.py\", line 2705, in run_single_turn_streamed", "    raise ModelBehaviorError(\"Model did not produce a final response!\")", "agents.exceptions.ModelBehaviorError: Model did not produce a final response!"], "tool_executions": [{"path": "notes.txt", "content_chars": 560, "lines": 40, "last_line": "line 40 of 40"}]}
+exit=0

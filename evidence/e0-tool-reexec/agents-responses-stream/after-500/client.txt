@@ -1,0 +1,3 @@
+
+RESULT {"framework": "agents-responses", "mode": "stream", "exception": null, "final_output": "Done.", "tool_executions": [{"path": "notes.txt", "content_chars": 560, "lines": 40, "last_line": "line 40 of 40"}]}
+exit=0

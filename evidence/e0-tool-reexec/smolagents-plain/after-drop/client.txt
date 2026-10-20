@@ -1,0 +1,5 @@
+Error while generating output:
+'str' object has no attribute 'choices'
+
+RESULT {"framework": "smolagents", "mode": "plain", "exception": "AgentGenerationError: Error while generating output:\n'str' object has no attribute 'choices'", "final_output": null, "trace_tail": ["  File \"/tmp/dv/lib/python3.12/site-packages/smolagents/agents.py\", line 1325, in _step_stream", "    raise AgentGenerationError(f\"Error while generating output:\\n{e}\", self.logger) from e", "smolagents.utils.AgentGenerationError: Error while generating output:", "'str' object has no attribute 'choices'"], "tool_executions": [{"path": "notes.txt", "content_chars": 560, "lines": 40, "last_line": "line 40 of 40"}]}
+exit=0

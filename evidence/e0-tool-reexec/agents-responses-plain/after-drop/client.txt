@@ -1,0 +1,4 @@
+Error getting response
+
+RESULT {"framework": "agents-responses", "mode": "plain", "exception": "AttributeError: 'str' object has no attribute 'usage'", "final_output": null, "trace_tail": ["  File \"/tmp/dv/lib/python3.12/site-packages/agents/models/openai_responses.py\", line 249, in _usage_from_response", "    if response.usage is not None:", "       ^^^^^^^^^^^^^^", "AttributeError: 'str' object has no attribute 'usage'"], "tool_executions": [{"path": "notes.txt", "content_chars": 560, "lines": 40, "last_line": "line 40 of 40"}]}
+exit=0

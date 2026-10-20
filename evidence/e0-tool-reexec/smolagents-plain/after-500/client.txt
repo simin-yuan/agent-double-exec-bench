@@ -1,0 +1,6 @@
+Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+Reached max steps.
+
+RESULT {"framework": "smolagents", "mode": "plain", "exception": null, "final_output": "Done.", "tool_executions": [{"path": "notes.txt", "content_chars": 560, "lines": 40, "last_line": "line 40 of 40"}]}
+exit=0
