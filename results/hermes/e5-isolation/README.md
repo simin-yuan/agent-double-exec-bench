@@ -6,6 +6,9 @@ These runs isolate the retry layers behind the two Hermes numbers already report
 
 Everything here is a local run against a fake server on 127.0.0.1. No provider was contacted.
 
+429 baseline (3 requests) is in [`../plain/429`](../plain/429); the 500 and dropped-stream
+stream defaults are reproduced here as group `a`.
+
 ## Environment
 
 | item | value |
@@ -91,5 +94,6 @@ The cells are driver-agnostic; three steps reproduce any row above.
    files in [`_cfg/`](_cfg) are exactly what was used), and set `HERMES_STREAM_RETRIES=0` in
    the environment for the mid-stream layer.
 
-The batch wrapper that looped over the five groups lives in the private working copy; it only
-automates the three steps above and adds nothing to the measurement.
+`harness/e5_isolation.sh` wraps the three steps above: `GROUP=<name> CONFIG=<yaml|none> sh
+harness/e5_isolation.sh` runs both cells for one group (and honours `HERMES_STREAM_RETRIES`
+from the environment). It only automates the steps; it adds nothing to the measurement.
