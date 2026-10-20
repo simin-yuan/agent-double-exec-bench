@@ -1,0 +1,6 @@
+{"t": 7.717, "path": "/api/show", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": null, "timeout_hdr": null, "user_agent": "python-httpx/0.28.1", "body_sha": "7084721770d3", "n_items": 1, "tools_offered": []}
+{"t": 12.721, "path": "/api/show", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 14.049, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "OpenAI/Python 2.24.0", "body_sha": "b5324d8004ec", "n_items": 2, "tools_offered": ["tool_search", "tool_describe", "tool_call"]}
+{"t": 913.939, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 916.581, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "OpenAI/Python 2.24.0", "body_sha": "b5324d8004ec", "n_items": 2, "tools_offered": ["tool_search", "tool_describe", "tool_call"]}
+{"t": 1500.361, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}
