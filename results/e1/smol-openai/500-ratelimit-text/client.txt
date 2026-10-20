@@ -1,0 +1,14 @@
+╭────────────────────────────────── New run ───────────────────────────────────╮
+│                                                                              │
+│ Call the counter tool exactly once, then answer Done.                        │
+│                                                                              │
+╰─ OpenAIModel - fake-model ───────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Error while generating output:
+Error code: 500 - {'error': {'message': 'Rate limit reached for requests', 
+'type': 'server_error', 'code': 'server_error', 'param': None}}
+[Step 1: Duration 704.40 seconds]
+
+RESULT {"framework": "smol-openai", "stream": false, "exception": "smolagents.utils.AgentGenerationError: Error while generating output:\nError code: 500 - {'error': {'message': 'Rate limit reached for requests', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "final_output": null, "trace_tail": ["    for output in self._step_stream(action_step):", "                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^", "  File \"$VENVS/smol/lib/python3.13/site-packages/smolagents/agents.py\", line 1325, in _step_stream", "    raise AgentGenerationError(f\"Error while generating output:\\n{e}\", self.logger) from e", "smolagents.utils.AgentGenerationError: Error while generating output:", "Error code: 500 - {'error': {'message': 'Rate limit reached for requests', 'type': 'server_error', 'code': 'server_error', 'param': None}}"], "elapsed_s": 705.64, "tool_executions": 0}
+exit=0
+wall_s=705.94 cap_s=1500
