@@ -1,0 +1,4 @@
+
+RESULT {"framework": "agents-responses", "stream": false, "exception": null, "final_output": "Done.", "elapsed_s": 7.5, "tool_executions": 1}
+exit=0
+wall_s=8.58 cap_s=120

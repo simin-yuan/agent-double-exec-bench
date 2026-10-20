@@ -1,0 +1,4 @@
+
+RESULT {"framework": "agents-chat", "stream": true, "exception": "openai.APIConnectionError: Connection error.", "final_output": null, "trace_tail": ["    async for sse in iterator:", "    ...<49 lines>...", "            )", "  File \"$VENVS/agents/lib/python3.13/site-packages/openai/_streaming.py\", line 176, in _iter_events", "    raise APIConnectionError(request=self.response.request) from err", "openai.APIConnectionError: Connection error."], "elapsed_s": 3.73, "tool_executions": 1}
+exit=0
+wall_s=4.44 cap_s=1500

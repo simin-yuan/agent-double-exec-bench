@@ -1,0 +1,4 @@
+
+RESULT {"framework": "agents-chat", "stream": false, "exception": "openai.APIConnectionError: Connection error.", "final_output": null, "trace_tail": ["  File \"$VENVS/agents/lib/python3.13/site-packages/openai/_base_client.py\", line 2053, in post", "    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)", "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "  File \"$VENVS/agents/lib/python3.13/site-packages/openai/_base_client.py\", line 1808, in request", "    raise APIConnectionError(request=request) from err", "openai.APIConnectionError: Connection error."], "elapsed_s": 3.04, "tool_executions": 0}
+exit=0
+wall_s=3.43 cap_s=1500

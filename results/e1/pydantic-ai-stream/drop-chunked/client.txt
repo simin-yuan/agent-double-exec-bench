@@ -1,0 +1,13 @@
+                 pydantic-ai v2.58.0 • Python 3.13.16
+      / \
+     /   \       agent: agent • model: openai:fake-model • tools: 1 • capabilities: 0
+   /___.___\
+  /    |    \    observability: off — see every model and tool call live, with cost
+/      |      \    set it up free with Logfire and a GitHub login: https://pydantic.dev/ai-setup.md
+`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel
+
+                 goes away once observability is on — or PYDANTIC_AI_NO_BANNER=1
+
+RESULT {"framework": "pydantic-ai", "stream": true, "exception": "pydantic_ai.exceptions.ModelAPIError: Connection error.", "final_output": null, "trace_tail": ["  File \"/usr/lib/python3.13/contextlib.py\", line 162, in __exit__", "    self.gen.throw(value)", "    ~~~~~~~~~~~~~~^^^^^^^", "  File \"$VENVS/pai/lib/python3.13/site-packages/pydantic_ai/models/openai.py\", line 255, in _map_api_errors", "    raise ModelAPIError(model_name=model_name, message=e.message) from e", "pydantic_ai.exceptions.ModelAPIError: Connection error."], "elapsed_s": 2.97, "tool_executions": 0}
+exit=0
+wall_s=3.59 cap_s=1500

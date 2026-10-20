@@ -1,0 +1,2 @@
+{"t": 9.41, "path": "/v1/chat/completions", "scenario": "ok", "action": "tool_call", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "pydantic-ai/2.58.0", "body_sha": "a8f33511778b", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 9.431, "path": "/v1/chat/completions", "scenario": "ok", "action": "text", "has_tool_result": true, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "pydantic-ai/2.58.0", "body_sha": "00883b58d029", "n_items": 3, "tools_offered": ["counter"]}

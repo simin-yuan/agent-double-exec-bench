@@ -1,0 +1,2 @@
+{"t": 2.537, "path": "/v1/responses", "scenario": "after-tool-drop", "action": "tool_call", "has_tool_result": false, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "636a90623415", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 2.993, "path": "/v1/responses", "scenario": "after-tool-drop", "action": "drop", "has_tool_result": true, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "c0c9d2eb15a1", "n_items": 3, "tools_offered": ["counter"]}

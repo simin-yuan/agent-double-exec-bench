@@ -1,0 +1,10 @@
+ERROR:root:OpenAI API call failed: peer closed connection without sending complete message body (incomplete chunked read)
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: peer closed connection without sending complete message body (incomplete chunked read)
+ERROR:root:OpenAI API call failed: peer closed connection without sending complete message body (incomplete chunked read)
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: peer closed connection without sending complete message body (incomplete chunked read)
+ERROR:root:OpenAI API call failed: peer closed connection without sending complete message body (incomplete chunked read)
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: peer closed connection without sending complete message body (incomplete chunked read)
+
+RESULT {"framework": "crewai", "stream": true, "exception": "httpx.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)", "final_output": null, "trace_tail": ["  File \"/usr/lib/python3.13/contextlib.py\", line 162, in __exit__", "    self.gen.throw(value)", "    ~~~~~~~~~~~~~~^^^^^^^", "  File \"$VENVS/crew/lib/python3.13/site-packages/httpx/_transports/default.py\", line 118, in map_httpcore_exceptions", "    raise mapped_exc(message) from exc", "httpx.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)"], "elapsed_s": 4.21, "tool_executions": 3}
+exit=0
+wall_s=4.97 cap_s=1500

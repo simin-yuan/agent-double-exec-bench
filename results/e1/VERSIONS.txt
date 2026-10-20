@@ -1,0 +1,41 @@
+# E1 pinned versions (uv venvs, Python 3.13.16, installed 2026-10-20)
+# litellm 1.106.0 failed at first call with 'No module named mcp' -> mcp 2.3.0 added to smol and adk venvs.
+[agents]
+  mcp==2.3.0
+  openai==3.35.1
+  openai-agents==0.24.0
+[lg]
+  httpx==0.28.1
+  langchain-core==1.6.12
+  langchain-openai==1.7.2
+  langgraph==1.2.16
+  openai==3.35.1
+  tenacity==9.2.1
+[smol]
+  httpx==0.28.1
+  litellm==1.106.0
+  mcp==2.3.0
+  openai==2.54.0
+  smolagents==1.26.0
+[crew]
+  crewai==1.15.28
+  httpx==0.28.1
+  mcp==1.28.1
+  openai==2.54.0
+  tenacity==9.2.1
+[pai]
+  google-genai==2.31.0
+  httpx==0.28.1
+  mcp==2.3.0
+  openai==3.35.1
+  pydantic-ai==2.58.0
+  pydantic-ai-slim==2.58.0
+  tenacity==9.1.4
+[adk]
+  google-adk==2.12.0
+  google-genai==2.31.0
+  httpx==0.28.1
+  litellm==1.106.0
+  mcp==2.3.0
+  openai==2.54.0
+  tenacity==9.1.4

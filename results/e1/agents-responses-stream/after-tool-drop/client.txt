@@ -1,0 +1,4 @@
+
+RESULT {"framework": "agents-responses", "stream": true, "exception": "agents.exceptions.ModelBehaviorError: Model did not produce a final response!", "final_output": null, "trace_tail": ["    ...<18 lines>...", "    )", "    ^", "  File \"$VENVS/agents/lib/python3.13/site-packages/agents/run_internal/run_loop.py\", line 2705, in run_single_turn_streamed", "    raise ModelBehaviorError(\"Model did not produce a final response!\")", "agents.exceptions.ModelBehaviorError: Model did not produce a final response!"], "elapsed_s": 2.53, "tool_executions": 1}
+exit=0
+wall_s=3.11 cap_s=1500

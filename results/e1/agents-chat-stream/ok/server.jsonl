@@ -1,0 +1,2 @@
+{"t": 5.536, "path": "/v1/chat/completions", "scenario": "ok", "action": "tool_call", "has_tool_result": false, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "cae092e0e5bc", "n_items": 2, "tools_offered": ["counter"]}
+{"t": 6.004, "path": "/v1/chat/completions", "scenario": "ok", "action": "text", "has_tool_result": true, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "9e78dfc3fe66", "n_items": 4, "tools_offered": ["counter"]}

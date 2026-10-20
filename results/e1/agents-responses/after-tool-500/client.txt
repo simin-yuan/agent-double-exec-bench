@@ -1,0 +1,5 @@
+Error getting response
+
+RESULT {"framework": "agents-responses", "stream": false, "exception": "openai.InternalServerError: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "final_output": null, "trace_tail": ["  File \"$VENVS/agents/lib/python3.13/site-packages/openai/_base_client.py\", line 2053, in post", "    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)", "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "  File \"$VENVS/agents/lib/python3.13/site-packages/openai/_base_client.py\", line 1838, in request", "    raise self._make_status_error_from_response(err.response) from None", "openai.InternalServerError: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}"], "elapsed_s": 3.18, "tool_executions": 1}
+exit=0
+wall_s=3.53 cap_s=1500

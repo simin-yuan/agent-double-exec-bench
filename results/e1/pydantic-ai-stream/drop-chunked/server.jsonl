@@ -1,0 +1,1 @@
+{"t": 3.32, "path": "/v1/chat/completions", "scenario": "drop-chunked", "action": "drop-chunked", "has_tool_result": false, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "pydantic-ai/2.58.0", "body_sha": "ebee9d2a99bd", "n_items": 1, "tools_offered": ["counter"]}

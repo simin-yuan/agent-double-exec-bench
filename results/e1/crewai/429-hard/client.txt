@@ -1,0 +1,43 @@
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'agent_execution_started' (expected 'llm_call_started')
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'task_started' (expected 'llm_call_started')
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'agent_execution_started' (expected 'llm_call_started')
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'task_started' (expected 'llm_call_started')
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'agent_execution_started' (expected 'llm_call_started')
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'task_started' (expected 'llm_call_started')
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}
+
+RESULT {"framework": "crewai", "stream": false, "exception": "openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}", "final_output": null, "trace_tail": ["  File \"$VENVS/crew/lib/python3.13/site-packages/openai/_base_client.py\", line 1375, in post", "    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))", "                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "  File \"$VENVS/crew/lib/python3.13/site-packages/openai/_base_client.py\", line 1148, in request", "    raise self._make_status_error_from_response(err.response) from None", "openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.', 'type': 'insufficient_quota', 'code': 'insufficient_quota', 'param': None}}"], "elapsed_s": 25.81, "tool_executions": 0}
+exit=0
+wall_s=27.03 cap_s=1500

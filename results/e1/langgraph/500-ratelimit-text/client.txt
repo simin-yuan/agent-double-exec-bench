@@ -1,0 +1,6 @@
+$REPO/harness/e1_client.py:55: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  res = create_react_agent(llm, tools=[tool(counter)]).invoke({"messages": [("user", PROMPT)]})
+
+RESULT {"framework": "langgraph", "stream": false, "exception": "langchain_openai.chat_models.base.OpenAIAPIError: Error code: 500 - {'error': {'message': 'Rate limit reached for requests', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "final_output": null, "trace_tail": ["    _handle_openai_api_error(e)", "    ~~~~~~~~~~~~~~~~~~~~~~~~^^^", "  File \"$VENVS/lg/lib/python3.13/site-packages/langchain_openai/chat_models/base.py\", line 740, in _handle_openai_api_error", "    raise OpenAIAPIError(message=e.message, response=e.response, body=e.body) from e", "langchain_openai.chat_models.base.OpenAIAPIError: Error code: 500 - {'error': {'message': 'Rate limit reached for requests', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "During task with name 'agent' and id '086b26d5-c2b0-3f8c-22c4-e6258c8bddb2'"], "elapsed_s": 2.87, "tool_executions": 0}
+exit=0
+wall_s=3.16 cap_s=1500

@@ -1,0 +1,6 @@
+$REPO/harness/e1_client.py:55: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  res = create_react_agent(llm, tools=[tool(counter)]).invoke({"messages": [("user", PROMPT)]})
+
+RESULT {"framework": "langgraph", "stream": false, "exception": "langchain_openai.chat_models.base.OpenAIAPIError: Error code: 500 - {'error': {'message': 'Internal error on request req_4291ab: prompt is 14290 tokens', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "final_output": null, "trace_tail": ["    _handle_openai_api_error(e)", "    ~~~~~~~~~~~~~~~~~~~~~~~~^^^", "  File \"$VENVS/lg/lib/python3.13/site-packages/langchain_openai/chat_models/base.py\", line 740, in _handle_openai_api_error", "    raise OpenAIAPIError(message=e.message, response=e.response, body=e.body) from e", "langchain_openai.chat_models.base.OpenAIAPIError: Error code: 500 - {'error': {'message': 'Internal error on request req_4291ab: prompt is 14290 tokens', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "During task with name 'agent' and id '0e8eb824-1ab8-c6b5-a0ea-e350216e005f'"], "elapsed_s": 2.63, "tool_executions": 0}
+exit=0
+wall_s=2.93 cap_s=1500

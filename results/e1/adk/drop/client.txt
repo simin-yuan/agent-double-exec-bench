@@ -1,0 +1,403 @@
+$VENVS/adk/lib/python3.13/site-packages/google/adk/models/llm_request.py:306: UserWarning: [EXPERIMENTAL] feature FeatureName.JSON_SCHEMA_FOR_FUNC_DECL is enabled.
+  declaration = tool._get_declaration()
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+Node execution failed with exception
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/aiohttp/client_proto.py", line 145, in connection_lost
+    uncompleted = self._parser.feed_eof()
+  File "aiohttp/_http_parser.pyx", line 625, in aiohttp._http_parser.HttpParser.feed_eof
+aiohttp.http_exceptions.ContentLengthError: 400, message:
+  Not enough data to satisfy content length header (received 134 of 269 bytes).
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/custom_httpx/aiohttp_transport.py", line 90, in map_aiohttp_exceptions
+    yield
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/custom_httpx/aiohttp_transport.py", line 120, in __aiter__
+    async for chunk in self._aiohttp_response.content.iter_chunked(self.CHUNK_SIZE):
+        yield chunk
+  File "$VENVS/adk/lib/python3.13/site-packages/aiohttp/streams.py", line 46, in __anext__
+    rv = await self.read_func()
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/aiohttp/streams.py", line 459, in read
+    await self._wait("read")
+  File "$VENVS/adk/lib/python3.13/site-packages/aiohttp/streams.py", line 365, in _wait
+    await waiter
+aiohttp.client_exceptions.ClientPayloadError: Response payload is not completed: <ContentLengthError: 400, message='Not enough data to satisfy content length header (received 134 of 269 bytes).'>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/_base_client.py", line 1709, in request
+    response = await self._send_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/_client.py", line 1097, in _send_request
+    response = await self._send_with_auth_retry(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/_client.py", line 1075, in _send_with_auth_retry
+    response = await super()._send_request(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/_base_client.py", line 1628, in _send_request
+    return await self._client.send(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/httpx/_client.py", line 1643, in send
+    raise exc
+  File "$VENVS/adk/lib/python3.13/site-packages/httpx/_client.py", line 1637, in send
+    await response.aread()
+  File "$VENVS/adk/lib/python3.13/site-packages/httpx/_models.py", line 979, in aread
+    self._content = b"".join([part async for part in self.aiter_bytes()])
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/httpx/_models.py", line 997, in aiter_bytes
+    async for raw_bytes in self.aiter_raw():
+    ...<2 lines>...
+            yield chunk
+  File "$VENVS/adk/lib/python3.13/site-packages/httpx/_models.py", line 1055, in aiter_raw
+    async for raw_stream_bytes in self.stream:
+    ...<2 lines>...
+            yield chunk
+  File "$VENVS/adk/lib/python3.13/site-packages/httpx/_client.py", line 176, in __aiter__
+    async for chunk in self._stream:
+        yield chunk
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/custom_httpx/aiohttp_transport.py", line 130, in __aiter__
+    with map_aiohttp_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/custom_httpx/aiohttp_transport.py", line 109, in map_aiohttp_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: Response payload is not completed: <ContentLengthError: 400, message='Not enough data to satisfy content length header (received 134 of 269 bytes).'>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 985, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/logging_utils.py", line 344, in async_wrapper
+    result: Final = await func(*args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 539, in make_openai_chat_completion_request
+    raise e
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 515, in make_openai_chat_completion_request
+    raw_response = await openai_aclient.chat.completions.with_raw_response.create(**data, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/_legacy_response.py", line 386, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 2907, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<55 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/_base_client.py", line 1992, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/openai/_base_client.py", line 1744, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/main.py", line 687, in acompletion
+    response = await _resolve_dispatched_chat_response(init_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/main.py", line 752, in _resolve_dispatched_chat_response
+    return await pending
+           ^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 1045, in acompletion
+    raise OpenAIError(
+    ...<4 lines>...
+    )
+litellm.llms.openai.common_utils.OpenAIError: Connection error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner.py", line 138, in run
+    await self._execute_node(ctx, node_input)
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner.py", line 316, in _execute_node
+    await self._run_node_loop(ctx, node_input)
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner.py", line 330, in _run_node_loop
+    async for event in agen:
+    ...<8 lines>...
+        break
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_base_node.py", line 190, in run
+    async for item in agen:
+    ...<12 lines>...
+        yield Event(output=validated)
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/llm_agent.py", line 689, in _run_impl
+    async for event in agen:
+    ...<4 lines>...
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_llm_agent_wrapper.py", line 527, in run_llm_agent_as_node
+    async for event in run_iter:
+    ...<55 lines>...
+        break
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/base_agent.py", line 359, in run_async
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/base_agent.py", line 460, in _run_with_lifecycle
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 164, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 152, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/base_agent.py", line 423, in _run
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/llm_agent.py", line 638, in _run_async_impl
+    async for event in agen:
+    ...<8 lines>...
+        should_pause = True
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 343, in run_async
+    async for event in agen:
+    ...<3 lines>...
+        break
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 425, in _run_one_step_async
+    async for llm_response in agen:
+    ...<23 lines>...
+          yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 619, in _call_llm_async
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 316, in call_llm_async
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 164, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 152, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 277, in _call_llm_with_tracing
+    async for llm_response in agen:
+    ...<20 lines>...
+      yield llm_response
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 669, in _run_and_handle_error
+    async for response in agen:
+      yield response
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 397, in run_and_handle_error
+    raise model_error
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 370, in run_and_handle_error
+    async for llm_response in agen:
+      tel_ctx.record_llm_response(invocation_context, llm_response)
+      yield llm_response
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/models/lite_llm.py", line 4289, in generate_content_async
+    response = await self.llm_client.acompletion(**completion_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/models/lite_llm.py", line 1188, in acompletion
+    return await acompletion(
+           ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/chat_completions/dispatch.py", line 102, in acompletion
+    return await _ADISPATCH.arun(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/rust_bridge/dispatch.py", line 114, in arun
+    return await python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/utils.py", line 2303, in wrapper_async
+    raise e
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/utils.py", line 2118, in wrapper_async
+    result = await original_function(*args, **call_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/main.py", line 740, in acompletion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2492, in exception_type
+    _map_openai_exception(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<5 lines>...
+        extra_information=extra_information,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 475, in _map_openai_exception
+    raise InternalServerError(
+    ...<6 lines>...
+    )
+litellm.exceptions.InternalServerError: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.
+Root node a failed.
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner_utils.py", line 262, in _drive_root_node
+    await root_ctx._run_node_internal(  # pylint: disable=protected-access
+    ...<3 lines>...
+    )
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/context.py", line 516, in _run_node_internal
+    return await _dynamic_node_scheduler.run_node_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_dynamic_node_scheduler.py", line 758, in run_node_internal
+    raise DynamicNodeFailError(
+    ...<3 lines>...
+    )
+google.adk.workflow._errors.DynamicNodeFailError: Dynamic node a failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/runners.py", line 889, in _cleanup_root_task
+    await task
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner_utils.py", line 271, in _drive_root_node
+    raise e.error
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner.py", line 138, in run
+    await self._execute_node(ctx, node_input)
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner.py", line 316, in _execute_node
+    await self._run_node_loop(ctx, node_input)
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_node_runner.py", line 330, in _run_node_loop
+    async for event in agen:
+    ...<8 lines>...
+        break
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_base_node.py", line 190, in run
+    async for item in agen:
+    ...<12 lines>...
+        yield Event(output=validated)
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/llm_agent.py", line 689, in _run_impl
+    async for event in agen:
+    ...<4 lines>...
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/workflow/_llm_agent_wrapper.py", line 527, in run_llm_agent_as_node
+    async for event in run_iter:
+    ...<55 lines>...
+        break
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/base_agent.py", line 359, in run_async
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/base_agent.py", line 460, in _run_with_lifecycle
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 164, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 152, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/base_agent.py", line 423, in _run
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/agents/llm_agent.py", line 638, in _run_async_impl
+    async for event in agen:
+    ...<8 lines>...
+        should_pause = True
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 343, in run_async
+    async for event in agen:
+    ...<3 lines>...
+        break
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 425, in _run_one_step_async
+    async for llm_response in agen:
+    ...<23 lines>...
+          yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 619, in _call_llm_async
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 316, in call_llm_async
+    async for event in agen:
+      yield event
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 164, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/telemetry/_instrumentation.py", line 152, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 277, in _call_llm_with_tracing
+    async for llm_response in agen:
+    ...<20 lines>...
+      yield llm_response
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 669, in _run_and_handle_error
+    async for response in agen:
+      yield response
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 397, in run_and_handle_error
+    raise model_error
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 370, in run_and_handle_error
+    async for llm_response in agen:
+      tel_ctx.record_llm_response(invocation_context, llm_response)
+      yield llm_response
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/models/lite_llm.py", line 4289, in generate_content_async
+    response = await self.llm_client.acompletion(**completion_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/google/adk/models/lite_llm.py", line 1188, in acompletion
+    return await acompletion(
+           ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/chat_completions/dispatch.py", line 102, in acompletion
+    return await _ADISPATCH.arun(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/rust_bridge/dispatch.py", line 114, in arun
+    return await python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/utils.py", line 2303, in wrapper_async
+    raise e
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/utils.py", line 2118, in wrapper_async
+    result = await original_function(*args, **call_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/main.py", line 740, in acompletion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2492, in exception_type
+    _map_openai_exception(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<5 lines>...
+        extra_information=extra_information,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 475, in _map_openai_exception
+    raise InternalServerError(
+    ...<6 lines>...
+    )
+litellm.exceptions.InternalServerError: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.
+
+RESULT {"framework": "adk", "stream": false, "exception": "litellm.exceptions.InternalServerError: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.", "final_output": null, "trace_tail": ["    ^", "  File \"$VENVS/adk/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 475, in _map_openai_exception", "    raise InternalServerError(", "    ...<6 lines>...", "    )", "litellm.exceptions.InternalServerError: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error."], "elapsed_s": 5.95, "tool_executions": 0}
+exit=0
+wall_s=7.5 cap_s=1500

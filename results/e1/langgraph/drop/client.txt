@@ -1,0 +1,6 @@
+$REPO/harness/e1_client.py:55: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  res = create_react_agent(llm, tools=[tool(counter)]).invoke({"messages": [("user", PROMPT)]})
+
+RESULT {"framework": "langgraph", "stream": false, "exception": "langchain_openai.chat_models.base.OpenAIConnectionError: Connection error.", "final_output": null, "trace_tail": ["    _handle_openai_api_error(e)", "    ~~~~~~~~~~~~~~~~~~~~~~~~^^^", "  File \"$VENVS/lg/lib/python3.13/site-packages/langchain_openai/chat_models/base.py\", line 744, in _handle_openai_api_error", "    raise OpenAIConnectionError(message=e.message, request=e.request) from e", "langchain_openai.chat_models.base.OpenAIConnectionError: Connection error.", "During task with name 'agent' and id 'a8ab4860-504a-1205-d065-a83cf07ffe7a'"], "elapsed_s": 2.74, "tool_executions": 0}
+exit=0
+wall_s=2.98 cap_s=1500
