@@ -1,0 +1,5 @@
+{"path": "/v1/chat/completions", "scenario": "after-500", "first_request": true, "tools_offered": ["write_file", "final_answer"], "has_tool_result": false, "tool_result": null, "replayed_args_len": null, "stream": true}
+{"path": "/v1/chat/completions", "scenario": "after-500", "injected": "after-500", "has_tool_result": true}
+{"path": "/v1/chat/completions", "scenario": "after-500", "injected": "after-500", "has_tool_result": true}
+{"path": "/v1/chat/completions", "scenario": "after-500", "first_request": false, "tools_offered": ["write_file", "final_answer"], "has_tool_result": true, "tool_result": "[{\"type\": \"text\", \"text\": \"Observation:\\nwrote 560 chars to notes.txt\"}]", "replayed_args_len": null, "stream": true}
+{"path": "/v1/chat/completions", "scenario": "after-500", "first_request": false, "tools_offered": [], "has_tool_result": true, "tool_result": "[{\"type\": \"text\", \"text\": \"Observation:\\nwrote 560 chars to notes.txt\"}]", "replayed_args_len": null, "stream": false}

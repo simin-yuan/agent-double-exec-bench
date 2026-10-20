@@ -1,0 +1,14 @@
+{"tool": "write_file", "arguments": "{"path": "notes.txt", "content": "line 01  
+of 40\nline 02 of 40\nline 03 of 40\nline 04 of 40\nline 05 of 40\nline 06 of   
+40\nline 07 of 40\nline 08 of 40\nline 09 of 40\nline 10 of 40\nline 11 of      
+40\nline 12 of 40\nline 13 of 40\nline 14 of 40\nline 15 of 40\nline 16 of      
+40\nline 17 of 40\nline 18 of 40\nline 19 of 40\nline 20 of 40\nline 21 of      
+40\nline 22 of 40\nline 23 of 40\nline 24 of 40\nline 25 of 40\nline 26 of      
+40\nline 27 of 40\nline 28 of 40\nline 29 of 40\nline 30 of 40\nline 31 of      
+40\nline 32 of 40\nline 33 of 40\nline 34 of 40\nline 35 of 40\nline 36 of      
+40\nline 37 of 40\nline 38 of 40\nline 39 of 40\nline 40 of 40\n"}"}            Done.                                                                           Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+Reached max steps.
+
+RESULT {"framework": "smolagents", "mode": "stream", "exception": null, "final_output": "Done.", "tool_executions": [{"path": "notes.txt", "content_chars": 560, "lines": 40, "last_line": "line 40 of 40"}]}
+exit=0

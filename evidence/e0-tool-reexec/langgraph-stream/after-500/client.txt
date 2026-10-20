@@ -1,0 +1,5 @@
+/tmp/d/runners/py_runner.py:60: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  g = create_react_agent(llm, tools=[tool(write_file)])
+
+RESULT {"framework": "langgraph", "mode": "stream", "exception": null, "final_output": "Done.", "first_ai_tool_calls": [{"name": "write_file", "args_keys": ["path", "content"]}], "first_ai_invalid_tool_calls": 0, "first_ai_finish_reason": "tool_calls", "tool_executions": [{"path": "notes.txt", "content_chars": 560, "lines": 40, "last_line": "line 40 of 40"}]}
+exit=0
