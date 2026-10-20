@@ -1,0 +1,13 @@
+                 pydantic-ai v2.58.0 • Python 3.13.16
+      / \
+     /   \       agent: agent • model: openai:fake-model • tools: 1 • capabilities: 0
+   /___.___\
+  /    |    \    observability: off — see every model and tool call live, with cost
+/      |      \    set it up free with Logfire and a GitHub login: https://pydantic.dev/ai-setup.md
+`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel
+
+                 goes away once observability is on — or PYDANTIC_AI_NO_BANNER=1
+
+RESULT {"framework": "pydantic-ai", "stream": false, "exception": "pydantic_ai.exceptions.ModelHTTPError: status_code: 500, model_name: fake-model, body: {'message': 'Internal error on request req_4291ab: prompt is 14290 tokens', 'type': 'server_error', 'code': 'server_error', 'param': None}", "final_output": null, "trace_tail": ["    ~~~~~~~~~~~~~~^^^^^^^", "  File \"$VENVS/pai/lib/python3.13/site-packages/pydantic_ai/models/openai.py\", line 246, in _map_api_errors", "    raise ModelHTTPError(", "    ...<5 lines>...", "    ) from e", "pydantic_ai.exceptions.ModelHTTPError: status_code: 500, model_name: fake-model, body: {'message': 'Internal error on request req_4291ab: prompt is 14290 tokens', 'type': 'server_error', 'code': 'server_error', 'param': None}"], "elapsed_s": 2.94, "tool_executions": 0}
+exit=0
+wall_s=3.26 cap_s=1500

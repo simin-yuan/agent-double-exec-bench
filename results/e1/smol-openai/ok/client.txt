@@ -1,0 +1,22 @@
+╭────────────────────────────────── New run ───────────────────────────────────╮
+│                                                                              │
+│ Call the counter tool exactly once, then answer Done.                        │
+│                                                                              │
+╰─ OpenAIModel - fake-model ───────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Calling tool: 'counter' with arguments: {}                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Observations: COUNTER_OK n=1
+[Step 1: Duration 1.45 seconds| Input tokens: 10 | Output tokens: 5]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Calling tool: 'final_answer' with arguments: {'answer': 'Done.'}             │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Observations: Done.
+Final answer: Done.
+[Step 2: Duration 0.05 seconds| Input tokens: 20 | Output tokens: 10]
+
+RESULT {"framework": "smol-openai", "stream": false, "exception": null, "final_output": "Done.", "elapsed_s": 4.66, "tool_executions": 1}
+exit=0
+wall_s=5.38 cap_s=120

@@ -1,0 +1,1 @@
+{"t": 12.111, "path": "/v1/responses", "scenario": "429-hard", "action": "429-hard", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "8a5aac2b8c37", "n_items": 1, "tools_offered": ["counter"]}

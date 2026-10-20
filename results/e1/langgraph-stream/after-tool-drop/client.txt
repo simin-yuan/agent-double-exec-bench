@@ -1,0 +1,6 @@
+$REPO/harness/e1_client.py:55: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  res = create_react_agent(llm, tools=[tool(counter)]).invoke({"messages": [("user", PROMPT)]})
+
+RESULT {"framework": "langgraph", "stream": true, "exception": null, "final_output": "Do", "elapsed_s": 1.64, "tool_executions": 1}
+exit=0
+wall_s=1.95 cap_s=1500

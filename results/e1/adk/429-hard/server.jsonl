@@ -1,0 +1,1 @@
+{"t": 21.386, "path": "/v1/chat/completions", "scenario": "429-hard", "action": "429-hard", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "AsyncOpenAI/Python 2.54.0", "body_sha": "d94aa2d09aee", "n_items": 2, "tools_offered": ["counter"]}

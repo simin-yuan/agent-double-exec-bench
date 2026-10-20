@@ -1,0 +1,1 @@
+{"t": 9.144, "path": "/v1/chat/completions", "scenario": "429-hard", "action": "429-hard", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "pydantic-ai/2.58.0", "body_sha": "a8f33511778b", "n_items": 1, "tools_offered": ["counter"]}

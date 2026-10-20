@@ -1,0 +1,1 @@
+{"t": 1.842, "path": "/v1/chat/completions", "scenario": "drop", "action": "drop", "has_tool_result": false, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "OpenAI/Python 3.35.1", "body_sha": "595ff6504f2b", "n_items": 1, "tools_offered": ["counter"]}

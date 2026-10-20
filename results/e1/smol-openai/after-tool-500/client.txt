@@ -1,0 +1,20 @@
+╭────────────────────────────────── New run ───────────────────────────────────╮
+│                                                                              │
+│ Call the counter tool exactly once, then answer Done.                        │
+│                                                                              │
+╰─ OpenAIModel - fake-model ───────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Calling tool: 'counter' with arguments: {}                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Observations: COUNTER_OK n=1
+[Step 1: Duration 0.50 seconds| Input tokens: 10 | Output tokens: 5]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Error while generating output:
+Error code: 500 - {'error': {'message': 'upstream error', 'type': 
+'server_error', 'code': 'server_error', 'param': None}}
+[Step 2: Duration 1.42 seconds]
+
+RESULT {"framework": "smol-openai", "stream": false, "exception": "smolagents.utils.AgentGenerationError: Error while generating output:\nError code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "final_output": null, "trace_tail": ["    for output in self._step_stream(action_step):", "                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^", "  File \"$VENVS/smol/lib/python3.13/site-packages/smolagents/agents.py\", line 1325, in _step_stream", "    raise AgentGenerationError(f\"Error while generating output:\\n{e}\", self.logger) from e", "smolagents.utils.AgentGenerationError: Error while generating output:", "Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}"], "elapsed_s": 3.22, "tool_executions": 1}
+exit=0
+wall_s=3.54 cap_s=1500

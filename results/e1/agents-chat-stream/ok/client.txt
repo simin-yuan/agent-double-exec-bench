@@ -1,0 +1,4 @@
+
+RESULT {"framework": "agents-chat", "stream": true, "exception": null, "final_output": "Done.", "elapsed_s": 5.58, "tool_executions": 1}
+exit=0
+wall_s=6.39 cap_s=120

@@ -1,0 +1,19 @@
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+
+RESULT {"framework": "crewai", "stream": false, "exception": "openai.InternalServerError: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "final_output": null, "trace_tail": ["  File \"$VENVS/crew/lib/python3.13/site-packages/openai/_base_client.py\", line 1375, in post", "    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))", "                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "  File \"$VENVS/crew/lib/python3.13/site-packages/openai/_base_client.py\", line 1148, in request", "    raise self._make_status_error_from_response(err.response) from None", "openai.InternalServerError: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}"], "elapsed_s": 7.94, "tool_executions": 0}
+exit=0
+wall_s=8.73 cap_s=1500

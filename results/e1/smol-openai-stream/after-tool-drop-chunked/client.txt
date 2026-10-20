@@ -1,0 +1,20 @@
+╭────────────────────────────────── New run ───────────────────────────────────╮
+│                                                                              │
+│ Call the counter tool exactly once, then answer Done.                        │
+│                                                                              │
+╰─ OpenAIModel - fake-model ───────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{"tool": "counter", "arguments": "{}"}                                          ╭──────────────────────────────────────────────────────────────────────────────╮
+│ Calling tool: 'counter' with arguments: {}                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Observations: COUNTER_OK n=1
+[Step 1: Duration 0.60 seconds| Input tokens: 10 | Output tokens: 5]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while generating output:
+peer closed connection without sending complete message body (incomplete chunked
+read)
+[Step 2: Duration 0.01 seconds]
+
+RESULT {"framework": "smol-openai", "stream": true, "exception": "smolagents.utils.AgentGenerationError: Error while generating output:\npeer closed connection without sending complete message body (incomplete chunked read)", "final_output": null, "trace_tail": ["    for output in self._step_stream(action_step):", "                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^", "  File \"$VENVS/smol/lib/python3.13/site-packages/smolagents/agents.py\", line 1325, in _step_stream", "    raise AgentGenerationError(f\"Error while generating output:\\n{e}\", self.logger) from e", "smolagents.utils.AgentGenerationError: Error while generating output:", "peer closed connection without sending complete message body (incomplete chunked read)"], "elapsed_s": 3.01, "tool_executions": 1}
+exit=0
+wall_s=3.73 cap_s=1500

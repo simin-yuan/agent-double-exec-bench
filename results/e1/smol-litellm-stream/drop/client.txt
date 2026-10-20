@@ -1,0 +1,95 @@
+╭────────────────────────────────── New run ───────────────────────────────────╮
+│                                                                              │
+│ Call the counter tool exactly once, then answer Done.                        │
+│                                                                              │
+╰─ LiteLLMModel - openai/fake-model ───────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 1: Duration 1.51 seconds| Input tokens: 843 | Output tokens: 1]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 2: Duration 0.02 seconds| Input tokens: 1,743 | Output tokens: 2]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 3 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 3: Duration 0.04 seconds| Input tokens: 2,700 | Output tokens: 3]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 4: Duration 0.02 seconds| Input tokens: 3,714 | Output tokens: 4]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 5 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 5: Duration 0.03 seconds| Input tokens: 4,785 | Output tokens: 5]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 6: Duration 0.03 seconds| Input tokens: 5,913 | Output tokens: 6]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 7 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 7: Duration 0.03 seconds| Input tokens: 7,098 | Output tokens: 7]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 8 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 8: Duration 0.03 seconds| Input tokens: 8,340 | Output tokens: 8]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 9 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 9: Duration 0.03 seconds| Input tokens: 9,639 | Output tokens: 9]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 10 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 10: Duration 0.02 seconds| Input tokens: 10,995 | Output tokens: 10]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 11 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 11: Duration 0.03 seconds| Input tokens: 12,408 | Output tokens: 11]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 12 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 12: Duration 0.04 seconds| Input tokens: 13,878 | Output tokens: 12]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 13 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 13: Duration 0.04 seconds| Input tokens: 15,405 | Output tokens: 13]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 14 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 14: Duration 0.03 seconds| Input tokens: 16,989 | Output tokens: 14]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 15 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 15: Duration 0.03 seconds| Input tokens: 18,630 | Output tokens: 15]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 16 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 16: Duration 0.04 seconds| Input tokens: 20,328 | Output tokens: 16]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 17 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 17: Duration 0.03 seconds| Input tokens: 22,083 | Output tokens: 17]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 18 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 18: Duration 0.03 seconds| Input tokens: 23,895 | Output tokens: 18]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 19 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 19: Duration 0.03 seconds| Input tokens: 25,764 | Output tokens: 19]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 20 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Do                                                                              Error while parsing tool call from model output: The model output does not 
+contain any JSON blob.
+[Step 20: Duration 0.04 seconds| Input tokens: 27,690 | Output tokens: 20]
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+Reached max steps.
+[Step 21: Duration 1.30 seconds]
+
+RESULT {"framework": "smol-litellm", "stream": true, "exception": null, "final_output": "[{'type': 'text', 'text': 'Error in generating final LLM output: litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.'}]", "elapsed_s": 6.57, "tool_executions": 0}
+exit=0
+wall_s=8.07 cap_s=1500

@@ -1,0 +1,1 @@
+{"t": 4.116, "path": "/v1/chat/completions", "scenario": "drop-chunked", "action": "drop-chunked", "has_tool_result": false, "stream": true, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "OpenAI/Python 2.54.0", "body_sha": "249a149e8b51", "n_items": 2, "tools_offered": ["counter", "final_answer"]}

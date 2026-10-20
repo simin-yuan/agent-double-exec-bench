@@ -1,0 +1,4 @@
+
+RESULT {"framework": "crewai", "stream": false, "exception": null, "final_output": "Done.", "elapsed_s": 12.48, "tool_executions": 1}
+exit=0
+wall_s=13.24 cap_s=120

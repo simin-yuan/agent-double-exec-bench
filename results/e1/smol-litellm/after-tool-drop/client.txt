@@ -1,0 +1,24 @@
+╭────────────────────────────────── New run ───────────────────────────────────╮
+│                                                                              │
+│ Call the counter tool exactly once, then answer Done.                        │
+│                                                                              │
+╰─ LiteLLMModel - openai/fake-model ───────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Calling tool: 'counter' with arguments: {}                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Observations: COUNTER_OK n=1
+[Step 1: Duration 1.42 seconds| Input tokens: 10 | Output tokens: 5]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+Error while generating output:
+litellm.InternalServerError: InternalServerError: OpenAIException - Connection 
+error.
+[Step 2: Duration 1.32 seconds]
+
+RESULT {"framework": "smol-litellm", "stream": false, "exception": "smolagents.utils.AgentGenerationError: Error while generating output:\nlitellm.InternalServerError: InternalServerError: OpenAIException - Connection error.", "final_output": null, "trace_tail": ["    for output in self._step_stream(action_step):", "                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^", "  File \"$VENVS/smol/lib/python3.13/site-packages/smolagents/agents.py\", line 1325, in _step_stream", "    raise AgentGenerationError(f\"Error while generating output:\\n{e}\", self.logger) from e", "smolagents.utils.AgentGenerationError: Error while generating output:", "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error."], "elapsed_s": 5.41, "tool_executions": 1}
+exit=0
+wall_s=6.73 cap_s=1500

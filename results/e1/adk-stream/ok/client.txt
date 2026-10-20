@@ -1,0 +1,6 @@
+$VENVS/adk/lib/python3.13/site-packages/google/adk/models/llm_request.py:306: UserWarning: [EXPERIMENTAL] feature FeatureName.JSON_SCHEMA_FOR_FUNC_DECL is enabled.
+  declaration = tool._get_declaration()
+
+RESULT {"framework": "adk", "stream": true, "exception": null, "final_output": "Done.", "elapsed_s": 10.14, "tool_executions": 1}
+exit=0
+wall_s=11.65 cap_s=120
