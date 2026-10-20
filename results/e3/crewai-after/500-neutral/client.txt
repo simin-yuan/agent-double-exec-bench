@@ -1,0 +1,22 @@
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+[CrewAIEventsBus] Warning: Event pairing mismatch. 'llm_call_failed' closed 
+'flow_started' (expected 'llm_call_started')
+
+RESULT {"framework": "crewai", "stream": false, "exception": "openai.InternalServerError: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}", "final_output": null, "trace_tail": ["  File \"$VENVS\\Lib\\site-packages\\openai\\_base_client.py\", line 1332, in post", "    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))", "                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "  File \"$VENVS\\Lib\\site-packages\\openai\\_base_client.py\", line 1105, in request", "    raise self._make_status_error_from_response(err.response) from None", "openai.InternalServerError: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}"], "elapsed_s": 10.34, "tool_executions": 0}
+Using an approximate input token count for model 'fake-model': assuming one token per four characters because a native token count is unavailable.
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'fake-model': assuming one token per four characters because a native token count is unavailable.
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'fake-model': assuming one token per four characters because a native token count is unavailable.
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+ERROR:crewai.flow.runtime:Error executing listener call_llm_native_tools: Error code: 500 - {'error': {'message': 'upstream error', 'type': 'server_error', 'code': 'server_error', 'param': None}}
+exit=0
+wall_s=11.4
