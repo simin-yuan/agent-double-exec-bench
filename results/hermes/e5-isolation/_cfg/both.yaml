@@ -1,0 +1,3 @@
+agent:
+  api_max_retries: 0
+  auto_recovery_cycles: 0

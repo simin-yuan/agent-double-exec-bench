@@ -1,0 +1,37 @@
+🤖 AI Agent initialized with model: fake-model
+🔗 Using custom base URL: http://127.0.0.1:51038/v1
+🔑 Using API key: sk-fake-...only
+✅ Enabled toolset 'counter': counter
+🚫 Disabled toolset 'onboarding': setup_beat
+🚫 Disabled toolset 'catalog': manage_catalog
+🛠️  Final tool selection (1 tools): counter
+🔎 Tool Search (tier 1): 1 MCP/plugin tools deferred (~42 tokens) behind tool_search/describe/call — catalog listing embedded.
+🛠️  Loaded 3 tools: tool_call, tool_describe, tool_search
+   ✅ Enabled toolsets: counter
+   ❌ Disabled toolsets: onboarding, catalog
+⚠️  Some tools may not work due to missing requirements: ['a2a', 'browser', 'browser-cdp', 'browser-use', 'computer_use', 'discord', 'discord_admin', 'hermes-yuanbao', 'image_gen', 'kanban', 'video', 'video_gen', 'vision', 'x_search']
+📊 Context limit: 256,000 tokens (compress at 75% = 192,000)
+💬 Starting conversation: 'Call the counter tool exactly once, then answer Done.'
+
+🔄 Making API call #1/9223372036854775807...
+   📊 Request size: 2 messages, ~1,545 tokens (~6,180 chars)
+   🔧 Available tools: 3
+⏳ Provider temporarily unavailable — retrying automatically in 16s (cycle 1/5); send /stop to cancel
+⏳ Provider temporarily unavailable — retrying automatically in 35s (cycle 2/5); send /stop to cancel
+⏳ Provider temporarily unavailable — retrying automatically in 63s (cycle 3/5); send /stop to cancel
+⏳ Provider temporarily unavailable — retrying automatically in 68s (cycle 4/5); send /stop to cancel
+⏳ Provider temporarily unavailable — retrying automatically in 61s (cycle 5/5); send /stop to cancel
+⏳ Automatic recovery gave up after 5 cycles — the provider is still unavailable.
+⚠️  Attempt 1/1 failed: HTTP 500: upstream error
+⚠️  Attempt 1/1 failed: HTTP 500: upstream error
+⚠️  Attempt 1/1 failed: HTTP 500: upstream error
+⚠️  Attempt 1/1 failed: HTTP 500: upstream error
+⚠️  Attempt 1/1 failed: HTTP 500: upstream error
+⚠️  Attempt 1/1 failed: HTTP 500: upstream error
+❌ API failed after 1 retries — HTTP 500: upstream error
+   💀 Final error: HTTP 500: upstream error
+🧾 Request debug dump written to: <repo>\results\hermes\e5-isolation\c-no-retries\500-neutral\work-state\sessions\request_dump_20261020_203230_5cb13d_20261020_203636_684306.json
+
+RESULT {"framework": "hermes", "stream": false, "exception": null, "final_output": "completed=False api_calls=1 final='OpenRouter returned a server error on all 1 attempts \u2014 it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.\\n\\nProvider said: HTTP 500: upstream err", "elapsed_s": 252.94, "tool_executions": 0}
+exit=0
+wall_s=253.52 cap_s=900
