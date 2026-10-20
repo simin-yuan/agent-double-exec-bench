@@ -1,0 +1,3 @@
+smolagents 1.26.0 openai 3.35.1
+openai client max_retries = 2
+outer retryer max_attempts = 3 wait_seconds = 60
