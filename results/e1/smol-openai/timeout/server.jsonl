@@ -1,0 +1,6 @@
+{"t": 9.915, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "OpenAI/Python 2.54.0", "body_sha": "e70f5e168e45", "n_items": 2, "tools_offered": ["counter", "final_answer"]}
+{"t": 609.951, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 610.375, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "1", "timeout_hdr": null, "user_agent": "OpenAI/Python 2.54.0", "body_sha": "e70f5e168e45", "n_items": 2, "tools_offered": ["counter", "final_answer"]}
+{"t": 1210.435, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 1211.202, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "2", "timeout_hdr": null, "user_agent": "OpenAI/Python 2.54.0", "body_sha": "e70f5e168e45", "n_items": 2, "tools_offered": ["counter", "final_answer"]}
+{"t": 1500.133, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}

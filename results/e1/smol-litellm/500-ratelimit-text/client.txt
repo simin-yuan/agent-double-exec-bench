@@ -1,0 +1,26 @@
+╭────────────────────────────────── New run ───────────────────────────────────╮
+│                                                                              │
+│ Call the counter tool exactly once, then answer Done.                        │
+│                                                                              │
+╰─ LiteLLMModel - openai/fake-model ───────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+Error while generating output:
+litellm.RateLimitError: RateLimitError: OpenAIException - Rate limit reached for
+requests
+[Step 1: Duration 941.59 seconds]
+
+RESULT {"framework": "smol-litellm", "stream": false, "exception": "smolagents.utils.AgentGenerationError: Error while generating output:\nlitellm.RateLimitError: RateLimitError: OpenAIException - Rate limit reached for requests", "final_output": null, "trace_tail": ["    for output in self._step_stream(action_step):", "                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^", "  File \"$VENVS/smol/lib/python3.13/site-packages/smolagents/agents.py\", line 1325, in _step_stream", "    raise AgentGenerationError(f\"Error while generating output:\\n{e}\", self.logger) from e", "smolagents.utils.AgentGenerationError: Error while generating output:", "litellm.RateLimitError: RateLimitError: OpenAIException - Rate limit reached for requests"], "elapsed_s": 944.41, "tool_executions": 0}
+exit=0
+wall_s=945.49 cap_s=1500

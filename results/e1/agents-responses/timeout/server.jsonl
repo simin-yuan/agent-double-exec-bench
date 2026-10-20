@@ -1,0 +1,6 @@
+{"t": 11.786, "path": "/v1/responses", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "8a5aac2b8c37", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 611.869, "path": "/v1/responses", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 612.371, "path": "/v1/responses", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "1", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "8a5aac2b8c37", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 1212.446, "path": "/v1/responses", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 1213.371, "path": "/v1/responses", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "2", "timeout_hdr": null, "user_agent": "Agents/Python 0.24.0", "body_sha": "8a5aac2b8c37", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 1500.181, "path": "/v1/responses", "scenario": "timeout", "event": "client_closed_held_connection"}

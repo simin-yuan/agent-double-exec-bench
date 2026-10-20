@@ -1,0 +1,12 @@
+                 pydantic-ai v2.58.0 • Python 3.13.16
+      / \
+     /   \       agent: agent • model: openai:fake-model • tools: 1 • capabilities: 0
+   /___.___\
+  /    |    \    observability: off — see every model and tool call live, with cost
+/      |      \    set it up free with Logfire and a GitHub login: https://pydantic.dev/ai-setup.md
+`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel
+
+                 goes away once observability is on — or PYDANTIC_AI_NO_BANNER=1
+Killed
+exit=137
+wall_s=1500.01 cap_s=1500

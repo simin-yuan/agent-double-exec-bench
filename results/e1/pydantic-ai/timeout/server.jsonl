@@ -1,0 +1,6 @@
+{"t": 10.422, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "0", "timeout_hdr": null, "user_agent": "pydantic-ai/2.58.0", "body_sha": "a8f33511778b", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 610.514, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 610.984, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "1", "timeout_hdr": null, "user_agent": "pydantic-ai/2.58.0", "body_sha": "a8f33511778b", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 1211.066, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}
+{"t": 1211.845, "path": "/v1/chat/completions", "scenario": "timeout", "action": "timeout", "has_tool_result": false, "stream": false, "retry_count_hdr": "2", "timeout_hdr": null, "user_agent": "pydantic-ai/2.58.0", "body_sha": "a8f33511778b", "n_items": 1, "tools_offered": ["counter"]}
+{"t": 1500.34, "path": "/v1/chat/completions", "scenario": "timeout", "event": "client_closed_held_connection"}

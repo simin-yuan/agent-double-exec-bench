@@ -1,0 +1,3542 @@
+{
+ "adk/429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.02,
+   1.0
+  ],
+  "outer_gaps": [],
+  "span_s": 2.02,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 15.32,
+  "client_elapsed_s": 13.3,
+  "outcome": "litellm.exceptions.RateLimitError"
+ },
+ "adk/429-hard": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 23.02,
+  "client_elapsed_s": 21.14,
+  "outcome": "litellm.exceptions.RateLimitError"
+ },
+ "adk/429-neutral-body": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.01
+  ],
+  "outer_gaps": [],
+  "span_s": 2.02,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 10.05,
+  "client_elapsed_s": 7.98,
+  "outcome": "litellm.exceptions.RateLimitError"
+ },
+ "adk/500-neutral": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.92
+  ],
+  "outer_gaps": [],
+  "span_s": 1.38,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.41,
+  "client_elapsed_s": 6.59,
+  "outcome": "litellm.exceptions.InternalServerError"
+ },
+ "adk/500-ratelimit-text": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.51,
+   0.81
+  ],
+  "outer_gaps": [],
+  "span_s": 1.32,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.16,
+  "client_elapsed_s": 6.57,
+  "outcome": "litellm.exceptions.RateLimitError"
+ },
+ "adk/500-text-429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.51,
+   0.8
+  ],
+  "outer_gaps": [],
+  "span_s": 1.32,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 7.75,
+  "client_elapsed_s": 6.33,
+  "outcome": "litellm.exceptions.InternalServerError"
+ },
+ "adk/after-tool-500": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.51,
+   0.77
+  ],
+  "outer_gaps": [],
+  "span_s": 1.32,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 7.72,
+  "client_elapsed_s": 6.06,
+  "outcome": "litellm.exceptions.InternalServerError"
+ },
+ "adk/after-tool-drop": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.43,
+   0.9
+  ],
+  "outer_gaps": [],
+  "span_s": 1.39,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 8.22,
+  "client_elapsed_s": 6.6,
+  "outcome": "litellm.exceptions.InternalServerError"
+ },
+ "adk/drop": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.48,
+   0.97
+  ],
+  "outer_gaps": [],
+  "span_s": 1.46,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 7.5,
+  "client_elapsed_s": 5.95,
+  "outcome": "litellm.exceptions.InternalServerError"
+ },
+ "adk/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.06,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 11.28,
+  "client_elapsed_s": 9.84,
+  "outcome": "returned 'Done.'"
+ },
+ "adk/timeout": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   600.5,
+   600.95
+  ],
+  "outer_gaps": [],
+  "span_s": 1201.44,
+  "held_closed_after_s": [
+   600.1,
+   600.0,
+   277.0
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.01,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "adk-stream/after-tool-drop": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.2,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 6.42,
+  "client_elapsed_s": 4.97,
+  "outcome": "returned 'Do'"
+ },
+ "adk-stream/after-tool-drop-chunked": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.22,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 7.28,
+  "client_elapsed_s": 5.46,
+  "outcome": "litellm.exceptions.MidStreamFallbackError"
+ },
+ "adk-stream/drop": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 7.33,
+  "client_elapsed_s": 5.69,
+  "outcome": "returned 'Do'"
+ },
+ "adk-stream/drop-chunked": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 11.89,
+  "client_elapsed_s": 9.53,
+  "outcome": "litellm.exceptions.MidStreamFallbackError"
+ },
+ "adk-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.43,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 11.65,
+  "client_elapsed_s": 10.14,
+  "outcome": "returned 'Done.'"
+ },
+ "agents-chat/429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.02,
+   1.01
+  ],
+  "outer_gaps": [],
+  "span_s": 2.03,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 14.51,
+  "client_elapsed_s": 12.9,
+  "outcome": "openai.RateLimitError"
+ },
+ "agents-chat/429-hard": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 12.17,
+  "client_elapsed_s": 10.98,
+  "outcome": "openai.RateLimitError"
+ },
+ "agents-chat/429-neutral-body": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.01
+  ],
+  "outer_gaps": [],
+  "span_s": 2.01,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 9.2,
+  "client_elapsed_s": 8.56,
+  "outcome": "openai.RateLimitError"
+ },
+ "agents-chat/500-neutral": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.41,
+   0.79
+  ],
+  "outer_gaps": [],
+  "span_s": 1.2,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.83,
+  "client_elapsed_s": 3.44,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-chat/500-ratelimit-text": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.43,
+   0.78
+  ],
+  "outer_gaps": [],
+  "span_s": 1.21,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.58,
+  "client_elapsed_s": 3.03,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-chat/500-text-429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.45,
+   0.82
+  ],
+  "outer_gaps": [],
+  "span_s": 1.27,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.22,
+  "client_elapsed_s": 2.88,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-chat/after-tool-500": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.45,
+   0.79
+  ],
+  "outer_gaps": [],
+  "span_s": 1.25,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.15,
+  "client_elapsed_s": 2.81,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-chat/after-tool-drop": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.45,
+   0.96
+  ],
+  "outer_gaps": [],
+  "span_s": 1.43,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.55,
+  "client_elapsed_s": 3.17,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-chat/drop": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.43,
+   0.97
+  ],
+  "outer_gaps": [],
+  "span_s": 1.4,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.43,
+  "client_elapsed_s": 3.04,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-chat/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.04,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 8.2,
+  "client_elapsed_s": 7.32,
+  "outcome": "returned 'Done.'"
+ },
+ "agents-chat/timeout": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   600.52,
+   600.95
+  ],
+  "outer_gaps": [],
+  "span_s": 1201.46,
+  "held_closed_after_s": [
+   600.1,
+   600.1,
+   287.3
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.0,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "agents-chat-stream/after-tool-drop": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.25,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 2.6,
+  "client_elapsed_s": 2.21,
+  "outcome": "returned 'Do'"
+ },
+ "agents-chat-stream/after-tool-drop-chunked": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.44,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 4.44,
+  "client_elapsed_s": 3.73,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-chat-stream/drop": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 2.47,
+  "client_elapsed_s": 2.09,
+  "outcome": "returned 'Do'"
+ },
+ "agents-chat-stream/drop-chunked": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 4.58,
+  "client_elapsed_s": 4.18,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-chat-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.47,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 6.39,
+  "client_elapsed_s": 5.58,
+  "outcome": "returned 'Done.'"
+ },
+ "agents-responses/429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.02,
+   1.01
+  ],
+  "outer_gaps": [],
+  "span_s": 2.03,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 15.34,
+  "client_elapsed_s": 13.7,
+  "outcome": "openai.RateLimitError"
+ },
+ "agents-responses/429-hard": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 12.77,
+  "client_elapsed_s": 11.71,
+  "outcome": "openai.RateLimitError"
+ },
+ "agents-responses/429-neutral-body": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.0
+  ],
+  "outer_gaps": [],
+  "span_s": 2.01,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.62,
+  "client_elapsed_s": 7.92,
+  "outcome": "openai.RateLimitError"
+ },
+ "agents-responses/500-neutral": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.4,
+   0.85
+  ],
+  "outer_gaps": [],
+  "span_s": 1.26,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.49,
+  "client_elapsed_s": 3.13,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-responses/500-ratelimit-text": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.49,
+   0.76
+  ],
+  "outer_gaps": [],
+  "span_s": 1.26,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.67,
+  "client_elapsed_s": 3.3,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-responses/500-text-429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.42,
+   0.89
+  ],
+  "outer_gaps": [],
+  "span_s": 1.3,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.57,
+  "client_elapsed_s": 3.23,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-responses/after-tool-500": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.5,
+   0.77
+  ],
+  "outer_gaps": [],
+  "span_s": 1.36,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.53,
+  "client_elapsed_s": 3.18,
+  "outcome": "openai.InternalServerError"
+ },
+ "agents-responses/after-tool-drop": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.41,
+   0.99
+  ],
+  "outer_gaps": [],
+  "span_s": 1.48,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.72,
+  "client_elapsed_s": 3.26,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-responses/drop": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.99
+  ],
+  "outer_gaps": [],
+  "span_s": 1.45,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.81,
+  "client_elapsed_s": 3.5,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-responses/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.27,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 8.58,
+  "client_elapsed_s": 7.5,
+  "outcome": "returned 'Done.'"
+ },
+ "agents-responses/timeout": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   600.59,
+   601.0
+  ],
+  "outer_gaps": [],
+  "span_s": 1201.59,
+  "held_closed_after_s": [
+   600.1,
+   600.1,
+   286.8
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.01,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "agents-responses-stream/after-tool-drop": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.46,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.11,
+  "client_elapsed_s": 2.53,
+  "outcome": "agents.exceptions.ModelBehaviorError"
+ },
+ "agents-responses-stream/after-tool-drop-chunked": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 1.05,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 5.56,
+  "client_elapsed_s": 4.21,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-responses-stream/drop": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 2.67,
+  "client_elapsed_s": 2.21,
+  "outcome": "agents.exceptions.ModelBehaviorError"
+ },
+ "agents-responses-stream/drop-chunked": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 5.41,
+  "client_elapsed_s": 4.71,
+  "outcome": "openai.APIConnectionError"
+ },
+ "agents-responses-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.57,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 7.06,
+  "client_elapsed_s": 6.28,
+  "outcome": "returned 'Done.'"
+ },
+ "crewai/429": {
+  "requests": 27,
+  "logical": 1,
+  "per_logical": [
+   27
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.01,
+   1.0,
+   1.01,
+   1.0,
+   1.0,
+   1.05,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.06,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "outer_gaps": [
+   1.22,
+   1.92,
+   0.02,
+   1.18,
+   1.86,
+   0.03,
+   1.11,
+   1.82
+  ],
+  "span_s": 27.32,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 38.52,
+  "client_elapsed_s": 37.59,
+  "outcome": "openai.RateLimitError"
+ },
+ "crewai/429-hard": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [
+   1.26,
+   1.69,
+   0.08,
+   1.04,
+   1.76,
+   0.03,
+   1.04,
+   2.39
+  ],
+  "span_s": 9.29,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 27.03,
+  "client_elapsed_s": 25.81,
+  "outcome": "openai.RateLimitError"
+ },
+ "crewai/429-neutral-body": {
+  "requests": 27,
+  "logical": 1,
+  "per_logical": [
+   27
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.0,
+   1.01,
+   1.01,
+   1.0,
+   1.0,
+   1.01,
+   1.05,
+   1.0,
+   1.01,
+   1.0,
+   1.0,
+   1.01,
+   1.05,
+   1.0,
+   1.0,
+   1.01,
+   1.0,
+   1.0
+  ],
+  "outer_gaps": [
+   1.15,
+   2.37,
+   0.02,
+   1.14,
+   1.89,
+   0.02,
+   1.0,
+   2.04
+  ],
+  "span_s": 27.79,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 32.39,
+  "client_elapsed_s": 31.72,
+  "outcome": "openai.RateLimitError"
+ },
+ "crewai/500-neutral": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.97,
+   0.49,
+   0.77,
+   0.52,
+   0.91
+  ],
+  "outer_gaps": [
+   0.06,
+   0.01
+  ],
+  "span_s": 4.18,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.73,
+  "client_elapsed_s": 7.94,
+  "outcome": "openai.InternalServerError"
+ },
+ "crewai/500-ratelimit-text": {
+  "requests": 27,
+  "logical": 1,
+  "per_logical": [
+   27
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.39,
+   0.78,
+   0.49,
+   0.94,
+   0.41,
+   0.77,
+   0.5,
+   0.86,
+   0.4,
+   0.94,
+   0.38,
+   0.87,
+   0.49,
+   0.95,
+   0.45,
+   0.99,
+   0.39,
+   0.98
+  ],
+  "outer_gaps": [
+   1.02,
+   2.19,
+   0.04,
+   1.13,
+   2.38,
+   0.01,
+   0.81,
+   1.96
+  ],
+  "span_s": 21.53,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 25.49,
+  "client_elapsed_s": 24.83,
+  "outcome": "openai.InternalServerError"
+ },
+ "crewai/500-text-429": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.49,
+   0.94,
+   0.45,
+   0.83,
+   0.52,
+   0.83
+  ],
+  "outer_gaps": [
+   0.03,
+   0.01
+  ],
+  "span_s": 4.1,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.03,
+  "client_elapsed_s": 7.27,
+  "outcome": "openai.InternalServerError"
+ },
+ "crewai/after-tool-500": {
+  "requests": 12,
+  "logical": 4,
+  "per_logical": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2",
+   "0",
+   "0",
+   "1",
+   "2",
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.42,
+   0.95,
+   0.43,
+   0.92,
+   0.5,
+   0.99
+  ],
+  "outer_gaps": [
+   0.02,
+   0.01
+  ],
+  "span_s": 4.36,
+  "held_closed_after_s": [],
+  "tools": 3,
+  "capped": false,
+  "wall_s": 8.24,
+  "client_elapsed_s": 7.5,
+  "outcome": "openai.InternalServerError"
+ },
+ "crewai/after-tool-drop": {
+  "requests": 12,
+  "logical": 4,
+  "per_logical": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2",
+   "0",
+   "0",
+   "1",
+   "2",
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.42,
+   1.0,
+   0.5,
+   0.79,
+   0.5,
+   0.86
+  ],
+  "outer_gaps": [
+   0.02,
+   0.02
+  ],
+  "span_s": 4.13,
+  "held_closed_after_s": [],
+  "tools": 3,
+  "capped": false,
+  "wall_s": 8.26,
+  "client_elapsed_s": 7.55,
+  "outcome": "builtins.ConnectionError"
+ },
+ "crewai/drop": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.43,
+   0.82,
+   0.48,
+   0.98,
+   0.39,
+   0.88
+  ],
+  "outer_gaps": [
+   0.03,
+   0.02
+  ],
+  "span_s": 4.03,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 7.66,
+  "client_elapsed_s": 7.02,
+  "outcome": "builtins.ConnectionError"
+ },
+ "crewai/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.02,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 13.24,
+  "client_elapsed_s": 12.48,
+  "outcome": "returned 'Done.'"
+ },
+ "crewai/timeout": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   600.52,
+   601.02
+  ],
+  "outer_gaps": [],
+  "span_s": 1201.54,
+  "held_closed_after_s": [
+   600.1,
+   600.1,
+   283.9
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.01,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "crewai-stream/after-tool-drop": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.02,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.73,
+  "client_elapsed_s": 3.12,
+  "outcome": "returned 'Do'"
+ },
+ "crewai-stream/after-tool-drop-chunked": {
+  "requests": 6,
+  "logical": 4,
+  "per_logical": [
+   3,
+   1,
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [
+   0.01,
+   0.01
+  ],
+  "span_s": 0.06,
+  "held_closed_after_s": [],
+  "tools": 3,
+  "capped": false,
+  "wall_s": 4.97,
+  "client_elapsed_s": 4.21,
+  "outcome": "httpx.RemoteProtocolError"
+ },
+ "crewai-stream/drop": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 4.33,
+  "client_elapsed_s": 3.54,
+  "outcome": "returned 'Do'"
+ },
+ "crewai-stream/drop-chunked": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [
+   0.07,
+   0.03
+  ],
+  "span_s": 0.1,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 7.36,
+  "client_elapsed_s": 5.93,
+  "outcome": "httpx.RemoteProtocolError"
+ },
+ "crewai-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.03,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 8.7,
+  "client_elapsed_s": 7.93,
+  "outcome": "returned 'Done.'"
+ },
+ "langgraph/429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.02,
+   1.01
+  ],
+  "outer_gaps": [],
+  "span_s": 2.03,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 12.26,
+  "client_elapsed_s": 11.53,
+  "outcome": "langchain_openai.chat_models.base.OpenAIRateLimitError"
+ },
+ "langgraph/429-hard": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 11.01,
+  "client_elapsed_s": 9.52,
+  "outcome": "langchain_openai.chat_models.base.OpenAIRateLimitError"
+ },
+ "langgraph/429-neutral-body": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.0
+  ],
+  "outer_gaps": [],
+  "span_s": 2.01,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 7.22,
+  "client_elapsed_s": 6.72,
+  "outcome": "langchain_openai.chat_models.base.OpenAIRateLimitError"
+ },
+ "langgraph/500-neutral": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.47,
+   0.8
+  ],
+  "outer_gaps": [],
+  "span_s": 1.27,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.18,
+  "client_elapsed_s": 2.89,
+  "outcome": "langchain_openai.chat_models.base.OpenAIAPIError"
+ },
+ "langgraph/500-ratelimit-text": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.49,
+   0.82
+  ],
+  "outer_gaps": [],
+  "span_s": 1.31,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.16,
+  "client_elapsed_s": 2.87,
+  "outcome": "langchain_openai.chat_models.base.OpenAIAPIError"
+ },
+ "langgraph/500-text-429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.89
+  ],
+  "outer_gaps": [],
+  "span_s": 1.35,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 2.93,
+  "client_elapsed_s": 2.63,
+  "outcome": "langchain_openai.chat_models.base.OpenAIAPIError"
+ },
+ "langgraph/after-tool-500": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.51,
+   0.88
+  ],
+  "outer_gaps": [],
+  "span_s": 1.41,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.18,
+  "client_elapsed_s": 2.88,
+  "outcome": "langchain_openai.chat_models.base.OpenAIAPIError"
+ },
+ "langgraph/after-tool-drop": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.45,
+   1.0
+  ],
+  "outer_gaps": [],
+  "span_s": 1.47,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.28,
+  "client_elapsed_s": 2.89,
+  "outcome": "langchain_openai.chat_models.base.OpenAIConnectionError"
+ },
+ "langgraph/drop": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.4,
+   1.0
+  ],
+  "outer_gaps": [],
+  "span_s": 1.41,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 2.98,
+  "client_elapsed_s": 2.74,
+  "outcome": "langchain_openai.chat_models.base.OpenAIConnectionError"
+ },
+ "langgraph/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.03,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 8.78,
+  "client_elapsed_s": 8.14,
+  "outcome": "returned 'Done.'"
+ },
+ "langgraph/timeout": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [
+   1490.3
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.01,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "langgraph-stream/after-tool-drop": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.01,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 1.95,
+  "client_elapsed_s": 1.64,
+  "outcome": "returned 'Do'"
+ },
+ "langgraph-stream/after-tool-drop-chunked": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.04,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.2,
+  "client_elapsed_s": 2.57,
+  "outcome": "langchain_openai.chat_models.base.OpenAIConnectionError"
+ },
+ "langgraph-stream/drop": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 1.68,
+  "client_elapsed_s": 1.39,
+  "outcome": "returned 'Do'"
+ },
+ "langgraph-stream/drop-chunked": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.59,
+  "client_elapsed_s": 2.95,
+  "outcome": "langchain_openai.chat_models.base.OpenAIConnectionError"
+ },
+ "langgraph-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.06,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 5.22,
+  "client_elapsed_s": 4.22,
+  "outcome": "returned 'Done.'"
+ },
+ "pydantic-ai/429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.01
+  ],
+  "outer_gaps": [],
+  "span_s": 2.02,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.32,
+  "client_elapsed_s": 7.21,
+  "outcome": "pydantic_ai.exceptions.ModelHTTPError"
+ },
+ "pydantic-ai/429-hard": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 10.98,
+  "client_elapsed_s": 8.9,
+  "outcome": "pydantic_ai.exceptions.ModelHTTPError"
+ },
+ "pydantic-ai/429-neutral-body": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.01
+  ],
+  "outer_gaps": [],
+  "span_s": 2.02,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.89,
+  "client_elapsed_s": 3.47,
+  "outcome": "pydantic_ai.exceptions.ModelHTTPError"
+ },
+ "pydantic-ai/500-neutral": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.48,
+   0.85
+  ],
+  "outer_gaps": [],
+  "span_s": 1.33,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.5,
+  "client_elapsed_s": 3.22,
+  "outcome": "pydantic_ai.exceptions.ModelHTTPError"
+ },
+ "pydantic-ai/500-ratelimit-text": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.45,
+   0.76
+  ],
+  "outer_gaps": [],
+  "span_s": 1.21,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 2.87,
+  "client_elapsed_s": 2.56,
+  "outcome": "pydantic_ai.exceptions.ModelHTTPError"
+ },
+ "pydantic-ai/500-text-429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.98
+  ],
+  "outer_gaps": [],
+  "span_s": 1.43,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.26,
+  "client_elapsed_s": 2.94,
+  "outcome": "pydantic_ai.exceptions.ModelHTTPError"
+ },
+ "pydantic-ai/after-tool-500": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.54,
+   0.85
+  ],
+  "outer_gaps": [],
+  "span_s": 1.41,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 2.97,
+  "client_elapsed_s": 2.71,
+  "outcome": "pydantic_ai.exceptions.ModelHTTPError"
+ },
+ "pydantic-ai/after-tool-drop": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.97
+  ],
+  "outer_gaps": [],
+  "span_s": 1.46,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.31,
+  "client_elapsed_s": 3.01,
+  "outcome": "pydantic_ai.exceptions.ModelAPIError"
+ },
+ "pydantic-ai/drop": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.44,
+   1.0
+  ],
+  "outer_gaps": [],
+  "span_s": 1.44,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.15,
+  "client_elapsed_s": 2.88,
+  "outcome": "pydantic_ai.exceptions.ModelAPIError"
+ },
+ "pydantic-ai/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.02,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 9.56,
+  "client_elapsed_s": 8.97,
+  "outcome": "returned 'Done.'"
+ },
+ "pydantic-ai/timeout": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   600.56,
+   600.86
+  ],
+  "outer_gaps": [],
+  "span_s": 1201.42,
+  "held_closed_after_s": [
+   600.1,
+   600.1,
+   288.5
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.01,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "pydantic-ai-stream/after-tool-drop": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.02,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 1.58,
+  "client_elapsed_s": 1.27,
+  "outcome": "returned 'Do'"
+ },
+ "pydantic-ai-stream/after-tool-drop-chunked": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.03,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 2.31,
+  "client_elapsed_s": 1.85,
+  "outcome": "pydantic_ai.exceptions.ModelAPIError"
+ },
+ "pydantic-ai-stream/drop": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 1.64,
+  "client_elapsed_s": 1.34,
+  "outcome": "returned 'Do'"
+ },
+ "pydantic-ai-stream/drop-chunked": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.59,
+  "client_elapsed_s": 2.97,
+  "outcome": "pydantic_ai.exceptions.ModelAPIError"
+ },
+ "pydantic-ai-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.07,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 5.01,
+  "client_elapsed_s": 3.87,
+  "outcome": "returned 'Done.'"
+ },
+ "smol-litellm/429": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.0,
+   1.01,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "outer_gaps": [
+   201.78,
+   652.65
+  ],
+  "span_s": 860.45,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 872.11,
+  "client_elapsed_s": 870.99,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/429-hard": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 21.81,
+  "client_elapsed_s": 19.08,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/429-neutral-body": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.0,
+   1.02
+  ],
+  "outer_gaps": [],
+  "span_s": 2.03,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.11,
+  "client_elapsed_s": 6.93,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/500-neutral": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.38,
+   0.92
+  ],
+  "outer_gaps": [],
+  "span_s": 1.3,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 6.69,
+  "client_elapsed_s": 5.42,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/500-ratelimit-text": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.48,
+   0.9,
+   0.39,
+   0.89,
+   0.43,
+   0.95
+  ],
+  "outer_gaps": [
+   232.22,
+   703.93
+  ],
+  "span_s": 940.18,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 945.49,
+  "client_elapsed_s": 944.41,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/500-text-429": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.48,
+   0.88,
+   0.42,
+   0.76,
+   0.42,
+   0.8
+  ],
+  "outer_gaps": [
+   141.56,
+   349.44
+  ],
+  "span_s": 494.74,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 499.51,
+  "client_elapsed_s": 498.43,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/after-tool-500": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   1.0
+  ],
+  "outer_gaps": [],
+  "span_s": 1.5,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 6.43,
+  "client_elapsed_s": 5.4,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/after-tool-drop": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.4,
+   0.88
+  ],
+  "outer_gaps": [],
+  "span_s": 1.32,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 6.73,
+  "client_elapsed_s": 5.41,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/drop": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.5,
+   0.97
+  ],
+  "outer_gaps": [],
+  "span_s": 1.47,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 6.39,
+  "client_elapsed_s": 5.3,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.04,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 10.27,
+  "client_elapsed_s": 9.17,
+  "outcome": "returned 'Done.'"
+ },
+ "smol-litellm/timeout": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   600.53,
+   601.05
+  ],
+  "outer_gaps": [],
+  "span_s": 1201.58,
+  "held_closed_after_s": [
+   600.1,
+   600.1,
+   279.6
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.0,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "smol-litellm-stream/after-tool-drop": {
+  "requests": 23,
+  "logical": 21,
+  "per_logical": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.43,
+   0.77
+  ],
+  "outer_gaps": [],
+  "span_s": 1.93,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 6.9,
+  "client_elapsed_s": 5.87,
+  "outcome": "returned \"[{'type': 'text', 'text': 'Error in generating fin"
+ },
+ "smol-litellm-stream/after-tool-drop-chunked": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.22,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 7.53,
+  "client_elapsed_s": 6.44,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm-stream/drop": {
+  "requests": 23,
+  "logical": 21,
+  "per_logical": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.45,
+   0.8
+  ],
+  "outer_gaps": [],
+  "span_s": 2.13,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 8.07,
+  "client_elapsed_s": 6.57,
+  "outcome": "returned \"[{'type': 'text', 'text': 'Error in generating fin"
+ },
+ "smol-litellm-stream/drop-chunked": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 10.81,
+  "client_elapsed_s": 8.53,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-litellm-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.29,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 10.38,
+  "client_elapsed_s": 9.33,
+  "outcome": "returned 'Done.'"
+ },
+ "smol-openai/429": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.01,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "outer_gaps": [
+   147.85,
+   514.58
+  ],
+  "span_s": 668.47,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 679.64,
+  "client_elapsed_s": 679.15,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/429-hard": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [
+   176.76,
+   402.71
+  ],
+  "span_s": 579.47,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 590.78,
+  "client_elapsed_s": 590.39,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/429-neutral-body": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   1.01,
+   1.01,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "outer_gaps": [
+   226.84,
+   831.0
+  ],
+  "span_s": 1063.86,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 1066.07,
+  "client_elapsed_s": 1065.73,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/500-neutral": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.78
+  ],
+  "outer_gaps": [],
+  "span_s": 1.24,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.32,
+  "client_elapsed_s": 2.85,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/500-ratelimit-text": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.82,
+   0.48,
+   0.91,
+   0.39,
+   0.83
+  ],
+  "outer_gaps": [
+   231.79,
+   468.21
+  ],
+  "span_s": 703.89,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 705.94,
+  "client_elapsed_s": 705.64,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/500-text-429": {
+  "requests": 9,
+  "logical": 1,
+  "per_logical": [
+   9
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.82,
+   0.45,
+   0.97,
+   0.48,
+   0.82
+  ],
+  "outer_gaps": [
+   175.5,
+   439.6
+  ],
+  "span_s": 619.11,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 621.08,
+  "client_elapsed_s": 620.82,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/after-tool-500": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.43,
+   0.99
+  ],
+  "outer_gaps": [],
+  "span_s": 1.43,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.54,
+  "client_elapsed_s": 3.22,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/after-tool-drop": {
+  "requests": 4,
+  "logical": 2,
+  "per_logical": [
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.46,
+   0.85
+  ],
+  "outer_gaps": [],
+  "span_s": 1.32,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.37,
+  "client_elapsed_s": 2.99,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/drop": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.44,
+   0.8
+  ],
+  "outer_gaps": [],
+  "span_s": 1.24,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.09,
+  "client_elapsed_s": 2.79,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.03,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 5.38,
+  "client_elapsed_s": 4.66,
+  "outcome": "returned 'Done.'"
+ },
+ "smol-openai/timeout": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   600.46,
+   600.83
+  ],
+  "outer_gaps": [],
+  "span_s": 1201.29,
+  "held_closed_after_s": [
+   600.0,
+   600.1,
+   288.9
+  ],
+  "tools": 0,
+  "capped": true,
+  "wall_s": 1500.01,
+  "client_elapsed_s": null,
+  "outcome": "CAPPED (killed at cap, still running)"
+ },
+ "smol-openai-mr0/429": {
+  "requests": 3,
+  "logical": 1,
+  "per_logical": [
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [
+   232.15,
+   860.8
+  ],
+  "span_s": 1092.95,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 1095.31,
+  "client_elapsed_s": 1095.01,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai-mr0/500-neutral": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 2.52,
+  "client_elapsed_s": 2.14,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai-mr0/after-tool-500": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.01,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 2.72,
+  "client_elapsed_s": 2.38,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai-mr0/drop": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 2.36,
+  "client_elapsed_s": 1.99,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai-mr0/timeout": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [
+   600.1
+  ],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 602.51,
+  "client_elapsed_s": 602.22,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai-stream/after-tool-drop": {
+  "requests": 23,
+  "logical": 21,
+  "per_logical": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.48,
+   0.95
+  ],
+  "outer_gaps": [],
+  "span_s": 1.73,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.61,
+  "client_elapsed_s": 3.25,
+  "outcome": "returned \"[{'type': 'text', 'text': 'Error in generating fin"
+ },
+ "smol-openai-stream/after-tool-drop-chunked": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.03,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 3.73,
+  "client_elapsed_s": 3.01,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai-stream/drop": {
+  "requests": 23,
+  "logical": 21,
+  "per_logical": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   3
+  ],
+  "retry_hdrs": [
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "0",
+   "1",
+   "2"
+  ],
+  "inner_gaps": [
+   0.42,
+   0.85
+  ],
+  "outer_gaps": [],
+  "span_s": 1.55,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 3.77,
+  "client_elapsed_s": 3.26,
+  "outcome": "returned \"[{'type': 'text', 'text': 'Error in generating fin"
+ },
+ "smol-openai-stream/drop-chunked": {
+  "requests": 1,
+  "logical": 1,
+  "per_logical": [
+   1
+  ],
+  "retry_hdrs": [
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.0,
+  "held_closed_after_s": [],
+  "tools": 0,
+  "capped": false,
+  "wall_s": 4.4,
+  "client_elapsed_s": 3.66,
+  "outcome": "smolagents.utils.AgentGenerationError"
+ },
+ "smol-openai-stream/ok": {
+  "requests": 2,
+  "logical": 2,
+  "per_logical": [
+   1,
+   1
+  ],
+  "retry_hdrs": [
+   "0",
+   "0"
+  ],
+  "inner_gaps": [],
+  "outer_gaps": [],
+  "span_s": 0.06,
+  "held_closed_after_s": [],
+  "tools": 1,
+  "capped": false,
+  "wall_s": 5.55,
+  "client_elapsed_s": 4.78,
+  "outcome": "returned 'Done.'"
+ }
+}
