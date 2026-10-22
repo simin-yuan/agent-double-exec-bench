@@ -46,6 +46,12 @@ log lines, not requests. A plain `wc -l` will overcount.
 - CrewAI: issue crewAIInc/crewAI#8332, fix crewAIInc/crewAI#8333; measurements added to crewAIInc/crewAI#7771
 - Hermes Agent: measurements added to NousResearch/hermes-agent#140255
 
+## Record
+
+- Discovered: 2026-10-20
+- First public: 2026-10-20
+- Patch commit: `d4c81919c2d8` (on `huggingface/smolagents`, PR #3036; not merged upstream)
+
 ## License
 
 License: MIT, except `upstream/smolagents-fix.patch`, which is a diff against Hugging Face `smolagents`
