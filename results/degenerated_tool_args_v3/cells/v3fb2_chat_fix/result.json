@@ -5,7 +5,7 @@
   "api_calls": 2,
   "completed": true
  },
- "agent_pkg": "E:\\时晴\\shiqing-state\\sandbox\\wt_pr\\agent\\__init__.py",
+ "agent_pkg": "E:\\时晴\\workdir\\sandbox\\wt_pr\\agent\\__init__.py",
  "elapsed_s": 25.01,
  "consumed_bytes_per_request": [
   69,
@@ -51,7 +51,7 @@
  "line": "chat",
  "label": "v3fb2_chat_fix",
  "mode": "always",
- "src": "C:/Users/Simon/shiqing-state/sandbox/wt_pr",
+ "src": "<path>/workdir/sandbox/wt_pr",
  "wall_s": 25.91,
  "rc": 0
 }

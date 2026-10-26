@@ -5,7 +5,7 @@
   "api_calls": 2,
   "completed": true
  },
- "agent_pkg": "E:\\时晴\\shiqing-state\\sandbox\\wt_pr_clean\\agent\\__init__.py",
+ "agent_pkg": "E:\\时晴\\workdir\\sandbox\\wt_pr_clean\\agent\\__init__.py",
  "elapsed_s": 13.72,
  "consumed_bytes_per_request": [
   12,
@@ -21,7 +21,7 @@
  "line": "codex",
  "label": "v3_codex_oncecheck",
  "mode": "once",
- "src": "C:/Users/Simon/shiqing-state/sandbox/wt_pr_clean",
+ "src": "<path>/workdir/sandbox/wt_pr_clean",
  "wall_s": 15.61,
  "rc": 0
 }
