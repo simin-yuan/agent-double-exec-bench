@@ -1,0 +1,6 @@
+{"req": 1, "kind": "cut", "chat": 1, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 1, "kind": "cut", "chat": 1, "chars": 386, "closed_by_client": false}
+{"req": 2, "kind": "cut", "chat": 2, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 2, "kind": "cut", "chat": 2, "chars": 386, "closed_by_client": false}
+{"req": 3, "kind": "cut", "chat": 3, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 3, "kind": "cut", "chat": 3, "chars": 386, "closed_by_client": false}

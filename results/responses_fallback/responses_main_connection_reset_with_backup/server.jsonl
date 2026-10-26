@@ -1,0 +1,8 @@
+{"req": 1, "kind": "tool", "chat": 1, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 1, "kind": "rst", "chat": 1}
+{"req": 2, "kind": "text", "chat": 2, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 2, "kind": "rst", "chat": 2}
+{"req": 3, "kind": "text", "chat": 3, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 3, "kind": "rst", "chat": 3}
+{"req": 4, "kind": "text", "chat": 4, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 4, "kind": "rst", "chat": 4}

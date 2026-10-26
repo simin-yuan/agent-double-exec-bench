@@ -1,0 +1,33 @@
+{
+ "exception": null,
+ "final": {
+  "final_response": "Hel\nHel\nHel\nHel",
+  "api_calls": 4,
+  "completed": false,
+  "error": "Response remained truncated after 4 continuation attempts"
+ },
+ "agent_pkg": "E:\\时晴\\<state>\\sandbox\\wt_main\\agent\\__init__.py",
+ "elapsed_s": 6.6,
+ "consumed_bytes_per_request": [
+  69,
+  69,
+  69,
+  69,
+  69,
+  12,
+  707,
+  707,
+  707,
+  707
+ ],
+ "consumed_total": 3185,
+ "probe_records": 0,
+ "marker_lines": 0,
+ "fb_requests": [],
+ "line": "chat",
+ "label": "v4c_chat_cut_1",
+ "mode": "cut",
+ "src": "<home>\\<state>\\sandbox\\wt_main",
+ "wall_s": 7.71,
+ "rc": 0
+}

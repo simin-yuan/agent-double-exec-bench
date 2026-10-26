@@ -1,0 +1,97 @@
+[
+  {
+    "cell": "responses_main_degenerate_with_backup",
+    "build": "main",
+    "note": "degenerate args on every attempt, one backup provider configured",
+    "primary_requests": 3,
+    "primary_kinds": [
+      "degenerate",
+      "degenerate",
+      "degenerate"
+    ],
+    "backup_requests": 2,
+    "completed": true,
+    "user_visible": "Done"
+  },
+  {
+    "cell": "responses_branch_patch_degenerate_with_backup",
+    "build": "0a3807e + patch",
+    "note": "same, on the branch plus the patch",
+    "primary_requests": 6,
+    "primary_kinds": [
+      "degenerate",
+      "degenerate",
+      "degenerate",
+      "degenerate",
+      "degenerate",
+      "degenerate"
+    ],
+    "backup_requests": 2,
+    "completed": true,
+    "user_visible": "Done"
+  },
+  {
+    "cell": "chat_main_degenerate_with_backup",
+    "build": "main",
+    "note": "chat line, same stub, backup configured",
+    "primary_requests": 5,
+    "primary_kinds": [
+      "sampling",
+      "sampling",
+      "sampling",
+      "sampling",
+      "sampling"
+    ],
+    "backup_requests": 0,
+    "completed": false,
+    "user_visible": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, "
+  },
+  {
+    "cell": "responses_main_dropped_stream_with_backup",
+    "build": "main",
+    "note": "stream cut mid-flight on every attempt, backup configured",
+    "primary_requests": 3,
+    "primary_kinds": [
+      "cut",
+      "cut",
+      "cut"
+    ],
+    "backup_requests": 2,
+    "completed": true,
+    "user_visible": "Done"
+  },
+  {
+    "cell": "responses_main_connection_reset_with_backup",
+    "build": "main",
+    "note": "TCP reset after the first frame, backup configured",
+    "primary_requests": 8,
+    "primary_kinds": [
+      "tool",
+      "rst",
+      "text",
+      "rst",
+      "text",
+      "rst",
+      "text",
+      "rst"
+    ],
+    "backup_requests": 2,
+    "completed": true,
+    "user_visible": "Done"
+  },
+  {
+    "cell": "chat_main_dropped_stream_with_backup",
+    "build": "main",
+    "note": "chat line, stream cut mid-flight, backup configured",
+    "primary_requests": 4,
+    "primary_kinds": [
+      "sampling",
+      "sampling",
+      "sampling",
+      "sampling"
+    ],
+    "backup_requests": 0,
+    "completed": false,
+    "user_visible": "Hel\nHel\nHel\nHel"
+  }
+]
