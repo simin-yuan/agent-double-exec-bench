@@ -1,0 +1,3 @@
+.hermes/
+__pycache__/
+*.pyc

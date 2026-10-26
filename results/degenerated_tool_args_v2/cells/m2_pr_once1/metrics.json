@@ -1,0 +1,10 @@
+{
+ "arg_chunks": 11,
+ "cell": "m2_pr_once1",
+ "degenerate_attempts": 1,
+ "executor_probe_records": 1,
+ "final_text_replies": 1,
+ "marker_file_lines": 1,
+ "user_visible_last_line": "Done",
+ "whitespace_accepted": 4185
+}

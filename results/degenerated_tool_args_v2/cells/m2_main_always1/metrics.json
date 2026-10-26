@@ -1,0 +1,10 @@
+{
+ "arg_chunks": 1385,
+ "cell": "m2_main_always1",
+ "degenerate_attempts": 5,
+ "executor_probe_records": 0,
+ "final_text_replies": 0,
+ "marker_file_lines": 0,
+ "user_visible_last_line": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, or raise max_tokens for this model.",
+ "whitespace_accepted": 706560
+}

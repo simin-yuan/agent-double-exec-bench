@@ -1,0 +1,10 @@
+{
+ "arg_chunks": 81,
+ "cell": "m2_pr_always2",
+ "degenerate_attempts": 9,
+ "executor_probe_records": 0,
+ "final_text_replies": 0,
+ "marker_file_lines": 0,
+ "user_visible_last_line": "Provider said: tool-call arguments degenerated into 4096 consecutive whitespace characters",
+ "whitespace_accepted": 36864
+}
