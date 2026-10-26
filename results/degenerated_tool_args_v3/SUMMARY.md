@@ -38,6 +38,23 @@ then a valid call — the executor probe fires once and the marker file gains ex
 On the Responses path with the same backup configured, `#144745` never fails over: 6 primary
 requests, 0 fallback requests, outage line — the abort never reaches the failover classifier there.
 
+## The shape the PR describes (normal opening, then degeneration)
+
+The cells above answer every attempt with a tool call that is whitespace from the first character.
+The failure described upstream starts normally and then degenerates, so the same four cells were run
+again with that shape: arguments begin `{"command": "echo hi"` and then stream whitespace deltas for
+the rest of the stream (`partial_shape/`).
+
+| path | build | requests / turn | final line the user reads |
+|---|---|---|---|
+| chat | `#144745` | 9 | outage line, detail: "tool-call arguments degenerated into 4096 consecutive whitespace characters" |
+| chat | `#144745` + patch | 6 | "The model sent a tool call whose arguments degenerated into whitespace …" |
+| Responses | `#144745` | 6 | outage line, same detail |
+| Responses | `#144745` + patch | 6 | same new sentence |
+
+Same counts as the whitespace-from-the-start shape, and the cut still lands at 4096 on both builds,
+so the numbers in the report do not depend on how the degeneration is introduced.
+
 ## Scope of the patch
 
 The patch caps a degenerate-arguments abort at one reconnect per stream attempt. That is a real

@@ -1,0 +1,1 @@
+The model sent a tool call whose arguments degenerated into whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model.

@@ -1,0 +1,22 @@
+[
+  {
+    "cell": "v3p_chat_prc_partial",
+    "requests": 9,
+    "last_line": "Provider said: tool-call arguments degenerated into 4096 consecutive whitespace characters"
+  },
+  {
+    "cell": "v3p_chat_fix_partial",
+    "requests": 6,
+    "last_line": "The model sent a tool call whose arguments degenerated into whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model."
+  },
+  {
+    "cell": "v3p_codex_prc_partial",
+    "requests": 6,
+    "last_line": "Provider said: tool-call arguments degenerated into 4096 consecutive whitespace characters"
+  },
+  {
+    "cell": "v3p_codex_fix_partial",
+    "requests": 6,
+    "last_line": "The model sent a tool call whose arguments degenerated into whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model."
+  }
+]
