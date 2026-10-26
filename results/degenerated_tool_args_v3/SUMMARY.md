@@ -5,8 +5,15 @@ Codex/Responses stream), with a positive control per build, and one extra config
 provider pointed at a healthy endpoint.
 
 Each cell is one real agent turn. The stub answers every attempt with the same `terminal` call whose
-arguments are whitespace only; the agent binary, toolset and prompt are the ones in the upstream PR
-(`hermes chat -Q -t terminal --yolo -q "run echo hi"`). No API cost, no network.
+arguments are whitespace only. No API cost, no network.
+
+**How the cells were produced.** The runner instantiates the same agent entry point the CLI uses
+(`run_agent.AIAgent`) and passes the settings that `hermes chat -Q -t terminal --yolo -q "run echo hi"`
+would apply: `enabled_toolsets=["terminal"]`, yolo mode, quiet mode, one user query, the same stub
+endpoint, no backup provider unless the row says otherwise. The `hermes chat` binary itself is not what
+drove these six rows, so what they measure is the agent loop, not CLI argument parsing or config
+loading. The table below was re-run through the actual binary afterwards; see
+[Re-run through the real CLI](#re-run-through-the-real-cli-2026-10-27).
 
 | path | build | requests / turn | whitespace accepted per request | tool runs | final line the user reads |
 |---|---|---|---|---|---|
@@ -35,8 +42,13 @@ then a valid call — the executor probe fires once and the marker file gains ex
 | `#144745` | 9 | 2 | 1 | `Done` |
 | `#144745` + patch | 6 | 2 | 1 | `Done` |
 
-On the Responses path with the same backup configured, `#144745` never fails over: 6 primary
-requests, 0 fallback requests, outage line — the abort never reaches the failover classifier there.
+**Corrected 2026-10-26.** An earlier version of this page said the Responses path "never fails over".
+That was wrong: the client used for those five lines was built without a backup model, so that side
+had no backup configured at all. Re-run with a backup configured
+([results/responses_fallback](../responses_fallback/SUMMARY.md)): `main` 3 primary + 2 backup,
+`#144745` 6 + 2, `#144745` + patch 6 + 2, a mid-stream cut 3 + 2, a first-frame TCP reset 8 + 2. Every
+case finished on the backup and the user read `Done`. The request counts in the table above are
+unaffected; only the failover sentence was wrong.
 
 ## The shape the PR describes (normal opening, then degeneration)
 
@@ -84,3 +96,33 @@ per-request values plus the raw server records are in `table.json` and each cell
   variance is compared. A real model usually recovers on a retry; these cells are the persistent case.
 - Nothing here says the cut itself is wrong — it is the abort path and the attribution that misfire.
 - No claim about other providers' behaviour; only the two paths this change touches.
+
+## Re-run through the real CLI (2026-10-27)
+
+Every row in the table above was re-run through the actual `hermes chat` binary, twice, against the
+same stub and the same prompt, in a hermes home of its own:
+
+| path | build | requests through `hermes chat` (run 1 / run 2) | requests in the table above |
+|---|---|---|---|
+| chat | `main` 9b904dcc | 5 / 5 | 5 |
+| chat | `#144745` 0a3807ec | 9 / 9 | 9 |
+| chat | `#144745` + patch 53b577f4 | 6 / 6 | 6 |
+| Responses | `main` 9b904dcc | 3 / 3 | 3 |
+| Responses | `#144745` 0a3807ec | 6 / 6 | 6 |
+| Responses | `#144745` + patch 53b577f4 | 6 / 6 | 6 |
+
+The counts agree row for row; nothing in the table changed. Three things about how this was run, so a
+reader can judge it:
+
+- **Counting.** Requests are counted from the stub's own log, not from client output. The Responses stub
+  writes two log lines per request (one carries the request path), so the count is taken from the lines
+  that carry a path; counting every line would have doubled it.
+- **Which build actually ran.** The CLI re-executes itself into its managed runtime on first start, and
+  that path drops `PYTHONPATH`, so a cold home loads the installed build instead of the checkout under
+  test. The probe log records the `agent/__init__.py` each turn loaded; the values in this table come
+  only from turns whose probe line points at the checkout named in the row. Cold-home runs are discarded.
+- **The Responses rows** use a custom provider entry that declares `api_mode: codex_responses` and points
+  at the stub. The built-in `openai-codex` provider wants stored OAuth credentials, which is not something
+  this bench should hold; the transport is the same one either way, the provider entry is not.
+
+The backup-provider rows above were not re-run through the binary; they are harness-only.
