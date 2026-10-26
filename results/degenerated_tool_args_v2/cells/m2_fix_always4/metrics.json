@@ -1,0 +1,10 @@
+{
+ "arg_chunks": 54,
+ "cell": "m2_fix_always4",
+ "degenerate_attempts": 6,
+ "executor_probe_records": 0,
+ "final_text_replies": 0,
+ "marker_file_lines": 0,
+ "user_visible_last_line": "OpenRouter sent a tool call made only of whitespace — nothing was run, and sending the same request again won't change the answer. Send `continue`, ask for the work in smaller steps, or switch models with /model.",
+ "whitespace_accepted": 24576
+}
