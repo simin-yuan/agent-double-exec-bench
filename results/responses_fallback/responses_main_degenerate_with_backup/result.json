@@ -1,0 +1,61 @@
+{
+ "exception": null,
+ "final": {
+  "final_response": "Done",
+  "api_calls": 2,
+  "completed": true
+ },
+ "agent_pkg": "E:\\时晴\\<state>\\sandbox\\wt_main\\agent\\__init__.py",
+ "fallback_configured": {
+  "provider": "fb2",
+  "model": "fake-model-2"
+ },
+ "elapsed_s": 21.99,
+ "consumed_bytes_per_request": [
+  12,
+  12,
+  12,
+  242682,
+  242682,
+  242682,
+  69,
+  69,
+  69,
+  69,
+  69,
+  12
+ ],
+ "consumed_total": 728439,
+ "probe_records": 1,
+ "marker_lines": 1,
+ "fb_requests": [
+  {
+   "req": 2,
+   "kind": "tool_call",
+   "chat": 1,
+   "chars": 803,
+   "closed_by_client": false,
+   "tools_exposed": [
+    "terminal",
+    "tool_search",
+    "tool_describe",
+    "tool_call"
+   ],
+   "elapsed": 0.0
+  },
+  {
+   "req": 3,
+   "kind": "final_text",
+   "chat": 2,
+   "chars": 329,
+   "closed_by_client": false,
+   "elapsed": 0.0
+  }
+ ],
+ "line": "codex",
+ "label": "v4e_codex_main_degen_fb",
+ "mode": "always",
+ "src": "wt_main",
+ "wall_s": 23.72,
+ "rc": 0
+}

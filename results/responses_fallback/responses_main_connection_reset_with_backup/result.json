@@ -1,0 +1,58 @@
+{
+ "exception": null,
+ "final": {
+  "final_response": "Done",
+  "api_calls": 2,
+  "completed": true
+ },
+ "agent_pkg": "E:\\时晴\\<state>\\sandbox\\wt_main\\agent\\__init__.py",
+ "fallback_configured": {
+  "provider": "fb2",
+  "model": "fake-model-2"
+ },
+ "elapsed_s": 13.24,
+ "consumed_bytes_per_request": [
+  12,
+  12,
+  12,
+  69,
+  69,
+  69,
+  69,
+  69,
+  12
+ ],
+ "consumed_total": 393,
+ "probe_records": 1,
+ "marker_lines": 1,
+ "fb_requests": [
+  {
+   "req": 2,
+   "kind": "tool_call",
+   "chat": 1,
+   "chars": 795,
+   "closed_by_client": false,
+   "tools_exposed": [
+    "terminal",
+    "tool_search",
+    "tool_describe",
+    "tool_call"
+   ],
+   "elapsed": 0.0
+  },
+  {
+   "req": 3,
+   "kind": "final_text",
+   "chat": 2,
+   "chars": 329,
+   "closed_by_client": false,
+   "elapsed": 0.0
+  }
+ ],
+ "line": "codex",
+ "label": "v4c_codex_rst_1",
+ "mode": "rst",
+ "src": "<home>\\<state>\\sandbox\\wt_main",
+ "wall_s": 14.17,
+ "rc": 0
+}
