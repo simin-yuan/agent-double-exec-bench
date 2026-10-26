@@ -13,9 +13,15 @@ arguments are whitespace only; the agent binary, toolset and prompt are the ones
 | chat | `main` | 5 | 141,312 | 0 | "reply was cut off … didn't run the incomplete action" |
 | chat | `#144745` | 9 | 4,096 | 0 | "didn't answer after 3 attempts — temporarily unavailable" |
 | chat | `#144745` + patch | 6 | 4,096 | 0 | "tool call made only of whitespace — nothing was run" |
-| Responses | `main` | 3 | 200,192 | 0 | "didn't answer after 3 attempts — temporarily unavailable" |
+| Responses | `main` | 3 | 200,192 | 0 | "didn't answer after 3 attempts — temporarily unavailable" † |
 | Responses | `#144745` | 6 | 4,096 | 0 | same outage line |
 | Responses | `#144745` + patch | 6 | 4,096 | 0 | "tool call made only of whitespace — nothing was run" |
+
+† On the Responses path `main` already ends with the outage line: the stub stops the stream at its
+own byte cap, and that path reads an unterminated stream as a transport failure. That is the harness
+being fair to it, not a finding about `main`. What `#144745` changes there is that the stop becomes
+Hermes's own decision — reported the same way as a provider fault — and that each attempt now costs
+two streams instead of one (6 requests against 3).
 
 Two rounds per cell, identical numbers. Positive control (`once` cells): first attempt degenerate,
 then a valid call — the executor probe fires once and the marker file gains exactly one line, so
@@ -31,6 +37,14 @@ then a valid call — the executor probe fires once and the marker file gains ex
 
 On the Responses path with the same backup configured, `#144745` never fails over: 6 primary
 requests, 0 fallback requests, outage line — the abort never reaches the failover classifier there.
+
+## Scope of the patch
+
+The patch caps a degenerate-arguments abort at one reconnect per stream attempt. That is a real
+reduction on chat (3 streams per attempt → 2). On the Responses wire the stream layer already allows
+exactly one reconnect (`max_stream_retries = 1`), so the request count there is unchanged and only
+the wording differs; taking it lower would mean editing the turn-level retry policy, which the patch
+does not touch on either path.
 
 ## How the numbers were taken
 
