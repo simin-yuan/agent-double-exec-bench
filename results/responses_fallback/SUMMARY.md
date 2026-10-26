@@ -25,3 +25,8 @@ Reading:
 
 Harness note: an earlier run of the Responses cells reported no switch because the client was built without a fallback model at all.
 The fix here is in the harness, not in Hermes.
+
+Device caveat: these cells were driven by the harness (same agent entry point and settings), not by the
+`hermes chat` binary. The six no-backup rows of the neighbouring table were re-run through the binary and
+matched row for row (see `../degenerated_tool_args_v3/SUMMARY.md`, section "Re-run through the real CLI").
+The backup rows here are harness-only.
