@@ -1,0 +1,7 @@
+{"req": 1, "path": "/api/show", "kind": "probe", "chars": 0}
+{"req": 2, "kind": "sampling", "chat": 1, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 2, "kind": "degenerate", "chat": 1, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 3, "kind": "sampling", "chat": 2, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 3, "kind": "tool_call", "chat": 2, "chars": 796, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.0}
+{"req": 4, "kind": "sampling", "chat": 3, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 4, "kind": "final_text", "chat": 3, "chars": 329, "closed_by_client": false, "elapsed": 0.0}

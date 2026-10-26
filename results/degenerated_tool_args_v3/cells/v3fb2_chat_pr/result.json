@@ -1,0 +1,57 @@
+{
+ "exception": null,
+ "final": {
+  "final_response": "Done",
+  "api_calls": 2,
+  "completed": true
+ },
+ "agent_pkg": "E:\\时晴\\shiqing-state\\sandbox\\wt_pr_clean\\agent\\__init__.py",
+ "elapsed_s": 30.4,
+ "consumed_bytes_per_request": [
+  69,
+  69,
+  69,
+  69,
+  69,
+  12,
+  69,
+  69,
+  69,
+  69,
+  69,
+  12
+ ],
+ "consumed_total": 714,
+ "probe_records": 1,
+ "marker_lines": 1,
+ "fb_requests": [
+  {
+   "req": 2,
+   "kind": "tool_call",
+   "chat": 1,
+   "chars": 793,
+   "closed_by_client": false,
+   "tools_exposed": [
+    "terminal",
+    "tool_search",
+    "tool_describe",
+    "tool_call"
+   ],
+   "elapsed": 0.0
+  },
+  {
+   "req": 3,
+   "kind": "final_text",
+   "chat": 2,
+   "chars": 329,
+   "closed_by_client": false,
+   "elapsed": 0.0
+  }
+ ],
+ "line": "chat",
+ "label": "v3fb2_chat_pr",
+ "mode": "always",
+ "src": "C:/Users/Simon/shiqing-state/sandbox/wt_pr_clean",
+ "wall_s": 31.53,
+ "rc": 0
+}
