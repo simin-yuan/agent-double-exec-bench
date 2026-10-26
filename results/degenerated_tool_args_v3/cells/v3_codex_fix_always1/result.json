@@ -6,7 +6,7 @@
   "completed": false,
   "error": "The model emitted a tool call made only of whitespace; nothing was run — retry, or ask for a smaller step."
  },
- "agent_pkg": "E:\\时晴\\shiqing-state\\sandbox\\wt_pr\\agent\\__init__.py",
+ "agent_pkg": "E:\\时晴\\workdir\\sandbox\\wt_pr\\agent\\__init__.py",
  "elapsed_s": 16.58,
  "consumed_bytes_per_request": [
   12,
