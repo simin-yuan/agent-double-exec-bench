@@ -1,0 +1,11 @@
+{"req": 1, "path": "/api/show", "kind": "probe", "chars": 0}
+{"req": 2, "kind": "sampling", "chat": 1, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 2, "kind": "degenerate", "chat": 1, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 3, "kind": "sampling", "chat": 2, "temperature": null, "top_p": null, "max_tokens": 8192, "model": "fake-model"}
+{"req": 3, "kind": "degenerate", "chat": 2, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.02}
+{"req": 4, "kind": "sampling", "chat": 3, "temperature": null, "top_p": null, "max_tokens": 32768, "model": "fake-model"}
+{"req": 4, "kind": "degenerate", "chat": 3, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 5, "kind": "sampling", "chat": 4, "temperature": null, "top_p": null, "max_tokens": 65536, "model": "fake-model"}
+{"req": 5, "kind": "degenerate", "chat": 4, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.02}
+{"req": 6, "kind": "sampling", "chat": 5, "temperature": null, "top_p": null, "max_tokens": 131072, "model": "fake-model"}
+{"req": 6, "kind": "degenerate", "chat": 5, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}

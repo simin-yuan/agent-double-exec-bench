@@ -1,0 +1,19 @@
+{"req": 1, "path": "/api/show", "kind": "probe", "chars": 0}
+{"req": 2, "kind": "sampling", "chat": 1, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 2, "kind": "degenerate", "chat": 1, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 3, "kind": "sampling", "chat": 2, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 3, "kind": "degenerate", "chat": 2, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 4, "kind": "sampling", "chat": 3, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 4, "kind": "degenerate", "chat": 3, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 5, "kind": "sampling", "chat": 4, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 5, "kind": "degenerate", "chat": 4, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 6, "kind": "sampling", "chat": 5, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 6, "kind": "degenerate", "chat": 5, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 7, "kind": "sampling", "chat": 6, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 7, "kind": "degenerate", "chat": 6, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 8, "kind": "sampling", "chat": 7, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 8, "kind": "degenerate", "chat": 7, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 9, "kind": "sampling", "chat": 8, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 9, "kind": "degenerate", "chat": 8, "chars": 200950, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}
+{"req": 10, "kind": "sampling", "chat": 9, "temperature": null, "top_p": null, "max_tokens": null, "model": "fake-model"}
+{"req": 10, "kind": "degenerate", "chat": 9, "chars": 200503, "closed_by_client": false, "tools_exposed": ["terminal", "tool_search", "tool_describe", "tool_call"], "elapsed": 0.01}

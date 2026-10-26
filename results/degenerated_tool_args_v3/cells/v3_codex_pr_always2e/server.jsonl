@@ -1,0 +1,12 @@
+{"req": 1, "kind": "degenerate", "chat": 1, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 1, "kind": "degenerate", "chat": 1, "chars": 242682, "closed_by_client": false}
+{"req": 2, "kind": "degenerate", "chat": 2, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 2, "kind": "degenerate", "chat": 2, "chars": 208582, "closed_by_client": true}
+{"req": 3, "kind": "degenerate", "chat": 3, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 3, "kind": "degenerate", "chat": 3, "chars": 168282, "closed_by_client": true}
+{"req": 4, "kind": "degenerate", "chat": 4, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 4, "kind": "degenerate", "chat": 4, "chars": 198042, "closed_by_client": true}
+{"req": 5, "kind": "degenerate", "chat": 5, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 5, "kind": "degenerate", "chat": 5, "chars": 165182, "closed_by_client": true}
+{"req": 6, "kind": "degenerate", "chat": 6, "path": "/backend-api/codex/responses", "model": "gpt-5-codex", "temperature": null}
+{"req": 6, "kind": "degenerate", "chat": 6, "chars": 182542, "closed_by_client": true}

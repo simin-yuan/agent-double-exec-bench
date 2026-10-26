@@ -1,0 +1,1247 @@
+[
+ {
+  "label": "v3_chat_fix_always1",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_pr",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "chat_accumulator": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "OpenRouter sent a tool call made only of whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_fix_always2",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_pr",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "chat_accumulator": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "OpenRouter sent a tool call made only of whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_fix_once1",
+  "line": "chat",
+  "mode": "once",
+  "src": "wt_pr",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool_call",
+   "final_text"
+  ],
+  "accepted_values": [
+   4096,
+   104
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    104
+   ],
+   "chat_accumulator": [
+    4096,
+    104
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_fix_once2",
+  "line": "chat",
+  "mode": "once",
+  "src": "wt_pr",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool_call",
+   "final_text"
+  ],
+  "accepted_values": [
+   4096,
+   104
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    104
+   ],
+   "chat_accumulator": [
+    4096,
+    104
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_main_always1",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_main",
+  "requests": 5,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   141312
+  ],
+  "accepted_raw": {
+   "chat_accumulator": [
+    141312,
+    141312,
+    141312,
+    141312,
+    141312
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, or raise max_tokens for this model.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_main_always2",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_main",
+  "requests": 5,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   141312
+  ],
+  "accepted_raw": {
+   "chat_accumulator": [
+    141312,
+    141312,
+    141312,
+    141312,
+    141312
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, or raise max_tokens for this model.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_main_once1",
+  "line": "chat",
+  "mode": "once",
+  "src": "wt_main",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool_call",
+   "final_text"
+  ],
+  "accepted_values": [
+   141312,
+   105
+  ],
+  "accepted_raw": {
+   "chat_accumulator": [
+    141312,
+    105
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_main_once2",
+  "line": "chat",
+  "mode": "once",
+  "src": "wt_main",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool_call",
+   "final_text"
+  ],
+  "accepted_values": [
+   141312,
+   105
+  ],
+  "accepted_raw": {
+   "chat_accumulator": [
+    141312,
+    105
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_pr_always1",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 9,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "chat_accumulator": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "OpenRouter didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_pr_always2",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 9,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "chat_accumulator": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "OpenRouter didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_pr_once1",
+  "line": "chat",
+  "mode": "once",
+  "src": "wt_pr_clean",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool_call",
+   "final_text"
+  ],
+  "accepted_values": [
+   4096,
+   103
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    103
+   ],
+   "chat_accumulator": [
+    4096,
+    103
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_chat_pr_once2",
+  "line": "chat",
+  "mode": "once",
+  "src": "wt_pr_clean",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool_call",
+   "final_text"
+  ],
+  "accepted_values": [
+   4096,
+   103
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    103
+   ],
+   "chat_accumulator": [
+    4096,
+    103
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_fix_always1",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "assembler": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription sent a tool call made only of whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_fix_always2",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "assembler": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription sent a tool call made only of whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_fix_once1",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_pr",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   4096,
+   101
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    101,
+    4096,
+    101
+   ],
+   "assembler": [
+    4096,
+    101,
+    4096,
+    101
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_fix_once2",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_pr",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   4096,
+   101
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    101,
+    4096,
+    101
+   ],
+   "assembler": [
+    4096,
+    101,
+    4096,
+    101
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_main_always1",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_main",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   200192
+  ],
+  "accepted_raw": {
+   "assembler": [
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_main_always2",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_main",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   200192
+  ],
+  "accepted_raw": {
+   "assembler": [
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192,
+    200192
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_main_once1",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_main",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   200192,
+   102
+  ],
+  "accepted_raw": {
+   "assembler": [
+    200192,
+    200192,
+    102,
+    200192,
+    102
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_main_once2",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_main",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   200192,
+   102
+  ],
+  "accepted_raw": {
+   "assembler": [
+    200192,
+    200192,
+    102,
+    200192,
+    102
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_oncecheck",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_pr_clean",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   4096,
+   108
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    108
+   ],
+   "assembler": [
+    4096,
+    108
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 0,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_oncecheck2",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_pr_clean",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   4096,
+   102
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    102
+   ],
+   "assembler": [
+    4096,
+    102
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_always1",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "assembler": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_always2",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "assembler": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_always2b",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [],
+  "accepted_raw": {},
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_always2c",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [],
+  "accepted_raw": {},
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_always2d",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [],
+  "accepted_raw": {},
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_always2e",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_once1",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_pr_clean",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   4096,
+   100
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    100,
+    4096,
+    100
+   ],
+   "assembler": [
+    4096,
+    4096,
+    100,
+    4096,
+    100
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3_codex_pr_once2",
+  "line": "codex",
+  "mode": "once",
+  "src": "wt_pr_clean",
+  "requests": 3,
+  "server_kinds": [
+   "degenerate",
+   "tool",
+   "text"
+  ],
+  "accepted_values": [
+   4096,
+   100
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    100,
+    4096,
+    100
+   ],
+   "assembler": [
+    4096,
+    4096,
+    100,
+    4096,
+    100
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3fb2_chat_fix",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_pr",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096,
+   101
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    101
+   ],
+   "chat_accumulator": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    101
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 2
+ },
+ {
+  "label": "v3fb2_chat_main",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_main",
+  "requests": 5,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   141312
+  ],
+  "accepted_raw": {
+   "chat_accumulator": [
+    141312,
+    141312,
+    141312,
+    141312,
+    141312
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, or raise max_tokens for this model.",
+  "fb_requests": 0
+ },
+ {
+  "label": "v3fb2_chat_pr",
+  "line": "chat",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 9,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096,
+   100
+  ],
+  "accepted_raw": {
+   "chat_accumulator": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    100
+   ]
+  },
+  "executions": 1,
+  "marker_lines": 1,
+  "final_line": "Done",
+  "fb_requests": 2
+ },
+ {
+  "label": "v3fb_codex_pr",
+  "line": "codex",
+  "mode": "always",
+  "src": "wt_pr_clean",
+  "requests": 6,
+  "server_kinds": [
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate",
+   "degenerate"
+  ],
+  "accepted_values": [
+   4096
+  ],
+  "accepted_raw": {
+   "guard_watch": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ],
+   "assembler": [
+    4096,
+    4096,
+    4096,
+    4096,
+    4096,
+    4096
+   ]
+  },
+  "executions": 0,
+  "marker_lines": 0,
+  "final_line": "ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.",
+  "fb_requests": 0
+ }
+]

@@ -1,0 +1,27 @@
+{
+ "exception": null,
+ "final": {
+  "final_response": "Done",
+  "api_calls": 2,
+  "completed": true
+ },
+ "agent_pkg": "E:\\时晴\\shiqing-state\\sandbox\\wt_pr\\agent\\__init__.py",
+ "elapsed_s": 11.25,
+ "consumed_bytes_per_request": [
+  12,
+  12,
+  12,
+  1343,
+  872
+ ],
+ "consumed_total": 2251,
+ "probe_records": 1,
+ "marker_lines": 1,
+ "fb_requests": [],
+ "line": "codex",
+ "label": "v3_codex_fix_once1",
+ "mode": "once",
+ "src": "C:/Users/Simon/shiqing-state/sandbox/wt_pr",
+ "wall_s": 13.17,
+ "rc": 0
+}

@@ -1,0 +1,3 @@
+ChatGPT or Codex Subscription didn't answer after 3 attempts — it looks temporarily unavailable. Wait a minute and send /retry, or switch models with /model. To avoid this in future, add a backup provider with `hermes fallback add`.
+
+Provider said: Codex Responses stream did not emit a terminal response

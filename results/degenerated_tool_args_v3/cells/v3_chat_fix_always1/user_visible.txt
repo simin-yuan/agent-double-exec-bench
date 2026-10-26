@@ -1,0 +1,1 @@
+OpenRouter sent a tool call made only of whitespace — nothing was run. Sending the same request again is unlikely to help: ask for a smaller step, or switch models with /model.

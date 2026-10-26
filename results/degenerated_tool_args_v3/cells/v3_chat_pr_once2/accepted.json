@@ -1,0 +1,10 @@
+{
+ "guard_watch": [
+  4096,
+  103
+ ],
+ "chat_accumulator": [
+  4096,
+  103
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "exception": null,
+ "final": {
+  "final_response": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, or raise max_tokens for this model.",
+  "api_calls": 1,
+  "completed": false,
+  "error": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, or raise max_tokens for this model."
+ },
+ "agent_pkg": "E:\\时晴\\shiqing-state\\sandbox\\wt_main\\agent\\__init__.py",
+ "elapsed_s": 7.5,
+ "consumed_bytes_per_request": [
+  69,
+  69,
+  69,
+  69,
+  69,
+  12
+ ],
+ "consumed_total": 357,
+ "probe_records": 0,
+ "marker_lines": 0,
+ "fb_requests": [],
+ "line": "chat",
+ "label": "v3_chat_main_always1",
+ "mode": "always",
+ "src": "C:/Users/Simon/shiqing-state/sandbox/wt_main",
+ "wall_s": 8.46,
+ "rc": 0
+}
