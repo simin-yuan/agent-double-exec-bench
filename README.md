@@ -1,5 +1,7 @@
 # agent-double-exec-bench
 
+Simin Yuan · [github.com/simin-yuan](https://github.com/simin-yuan)
+
 **One network fault: what does an agent framework do twice?**
 
 We pointed seven agent frameworks at a local fake model server that fails on purpose
