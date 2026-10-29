@@ -6,7 +6,7 @@
   "completed": false,
   "error": "Codex Responses stream did not emit a terminal response"
  },
- "agent_pkg": "E:\\时晴\\workdir\\sandbox\\wt_main\\agent\\__init__.py",
+ "agent_pkg": "sandbox\\wt_main\\agent\\__init__.py",
  "elapsed_s": 15.47,
  "consumed_bytes_per_request": [
   12,
