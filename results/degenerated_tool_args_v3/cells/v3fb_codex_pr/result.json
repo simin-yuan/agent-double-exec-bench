@@ -6,7 +6,7 @@
   "completed": false,
   "error": "tool-call arguments degenerated into 4096 consecutive whitespace characters"
  },
- "agent_pkg": "E:\\时晴\\workdir\\sandbox\\wt_pr_clean\\agent\\__init__.py",
+ "agent_pkg": "sandbox\\wt_pr_clean\\agent\\__init__.py",
  "elapsed_s": 17.67,
  "consumed_bytes_per_request": [
   12,

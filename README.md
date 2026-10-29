@@ -38,7 +38,9 @@ Default settings everywhere. No real API, no cost; anyone can rerun it.
 Full table, every cell next to its log: [results/SUMMARY.md](results/SUMMARY.md). Method and caveats: [REPORT.md](REPORT.md).
 
 ## Rerun
-`harness/` contains the fault server and one runner per framework; `results/` holds the raw logs.
+`harness/` contains the fault server and one runner per framework; `results/` holds the raw logs. The
+`agent_pkg` field records a relative sandbox path: absolute build paths from the machine the runs were
+taken on were replaced on 2026-10-29, with no change to any measurement, counter, log line or verdict.
 Requests are counted from `server.jsonl`, never from client output, and only lines that record a model request
 count: the Hermes start-up probe (`/api/show`) and the `client_closed_held_connection` events in timeout cells are
 log lines, not requests. A plain `wc -l` will overcount.

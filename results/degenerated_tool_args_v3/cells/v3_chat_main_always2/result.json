@@ -6,7 +6,7 @@
   "completed": false,
   "error": "The model's reply was cut off before it finished (it hit its output length limit), so Hermes didn't run the incomplete action. Nothing was changed. Send `continue`, ask for the work in smaller steps, or raise max_tokens for this model."
  },
- "agent_pkg": "E:\\时晴\\workdir\\sandbox\\wt_main\\agent\\__init__.py",
+ "agent_pkg": "sandbox\\wt_main\\agent\\__init__.py",
  "elapsed_s": 7.92,
  "consumed_bytes_per_request": [
   69,
