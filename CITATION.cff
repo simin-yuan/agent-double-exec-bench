@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this bench in your work, please cite it as below."
+title: "Agent Double Execution Bench"
+abstract: >-
+  One network fault: what does an agent framework do twice? Seven agent
+  frameworks were pointed at a local fake model server that fails on purpose (429, 500,
+  dropped connections, silence), and the server's own log records how many requests each
+  one sends and how many times a side-effecting tool runs. Default settings everywhere.
+  No real API and no cost; anyone can rerun it.
+authors:
+  - family-names: Yuan
+    given-names: "Simin"
+    orcid: "https://orcid.org/0009-0002-6843-3390"
+    alias: simin-yuan
+    website: "https://github.com/simin-yuan"
+license: MIT
+repository-code: "https://github.com/simin-yuan/agent-double-exec-bench"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23808696
+    description: "Raw measurement records (dataset, CC-BY-4.0)"
+keywords:
+  - agents
+  - retries
+  - idempotency
+  - benchmark
+  - failure modes
