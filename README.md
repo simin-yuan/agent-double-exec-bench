@@ -18,6 +18,9 @@ Default settings everywhere. No real API, no cost; anyone can rerun it.
 | smolagents 1.26.0 | **9** | 3 | 1 |
 | CrewAI 1.15.28 | **27** | 9 | **3** (known: crewAIInc/crewAI#5802) |
 | Hermes Agent @ c5a3c0f | 3 | **23** | not measurable (see results/hermes) |
+| NVIDIA NeMo Agent Toolkit 1.9.0 (`tool_calling_agent`) | 3 | 3 | 1 |
+
+NeMo Agent Toolkit row (added 2026-11-03): The model is the same local fake OpenAI-compatible server as every other row; no hosted model, no key. NAT 1.9.0 = tag `v1.9.0` (`baffefc68315b93e363cfd986c8f7e8dd45ce5e7`), `tool_calling_agent` workflow, `llms: {_type: openai}`, NAT defaults; NAT's agents always stream. n=3 per cell, run one after another; raw logs and the adapter are in [results/nat-1.9.0](results/nat-1.9.0/) and [harness/nat](harness/nat/). It also holds one request to a silent server for the whole 25-minute cap (no default request timeout; known upstream as NVIDIA/NeMo-Agent-Toolkit#1617), and returns the partial `Do` of a close-delimited stream as the answer, like most rows.
 
 ## What we found
 1. **Tools are almost never run twice.** Only CrewAI re-runs a tool after a failed model request:
@@ -49,6 +52,7 @@ log lines, not requests. A plain `wc -l` will overcount.
 - smolagents: issue huggingface/smolagents#3034, fix huggingface/smolagents#3036
 - CrewAI: issue crewAIInc/crewAI#8332, fix crewAIInc/crewAI#8333; measurements added to crewAIInc/crewAI#7771
 - Hermes Agent: measurements added to NousResearch/hermes-agent#140255
+- NeMo Agent Toolkit: nothing to report for this bench (no double execution); the default timeout is NVIDIA/NeMo-Agent-Toolkit#1617
 
 ## Record
 
