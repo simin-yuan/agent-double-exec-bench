@@ -32,6 +32,7 @@ jobs:
           PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           WHITELIST: ''
           FILTER_AUTHOR: ''
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           set -eu
           zero=0000000000000000000000000000000000000000
@@ -48,26 +49,55 @@ jobs:
             exec sh scripts/leak-scan.sh range "$range"
           fi
 
-          # New branch, or a first push with no `before` to diff against. Judge what
-          # the remote does not already have -- the same rule the pre-push hook uses
-          # (`git rev-list "$local_sha" --not --remotes`).
+          # New branch, or a first push with no `before` to diff against. Judge the
+          # commits this branch adds on top of the default branch.
           #
-          # This used to be `git rev-list --no-merges -n 200`, which on a branch cut
-          # from main reached back through commits that were already published, so the
-          # first push of every branch failed on history it had not created.
+          # Two wrong answers came before this one, both found by reading the logs:
           #
-          # If --remotes resolves to nothing (no remote-tracking refs fetched), this
-          # falls back to the whole history: noisy, but never quieter than before.
-          echo "new branch or first push: judging commits the remote does not have"
-          if ! shas=$(git rev-list --no-merges "$HEAD_SHA" --not --remotes); then
-            echo "rev-list failed; refusing to judge" >&2
-            exit 1
+          #   -n 200 (original)
+          #     Walked back through published history, so the first push of every
+          #     branch failed on commits it had not created. Run 41864928618.
+          #
+          #   --not --remotes (intermediate)
+          #     On a push event, actions/checkout fetches the branch being pushed, so
+          #     the just-pushed commit is reachable from a remote-tracking ref and the
+          #     list comes back EMPTY -- the gate reports clean without scanning
+          #     anything. Run 41871994606 printed "no unpushed commits" and exited 0
+          #     on a branch that carried a real commit. A green that means nothing is
+          #     worse than a red that means nothing.
+          #
+          # The base that works is the default branch: a branch push adds exactly the
+          # commits main does not have.
+          BASE_REF=""
+          if [ -n "${DEFAULT_BRANCH:-}" ] && git rev-parse --verify --quiet "origin/$DEFAULT_BRANCH" >/dev/null 2>&1; then
+            BASE_REF="origin/$DEFAULT_BRANCH"
+          fi
+          echo "new branch or first push: judging commits not in ${BASE_REF:-<whole history>}"
+          if [ -n "$BASE_REF" ]; then
+            if ! shas=$(git rev-list --no-merges "$HEAD_SHA" --not "$BASE_REF"); then
+              echo "rev-list failed; refusing to judge" >&2
+              exit 1
+            fi
+          else
+            # No resolvable default branch: judge everything. Noisy rather than blind.
+            echo "warning: cannot resolve origin/$DEFAULT_BRANCH, judging all history" >&2
+            if ! shas=$(git rev-list --no-merges "$HEAD_SHA"); then
+              echo "rev-list failed; refusing to judge" >&2
+              exit 1
+            fi
           fi
           if [ -z "$shas" ]; then
-            # Nothing unpushed means nothing new is being published -- a tag on an
-            # already-pushed commit, for instance. The hook lets this through too.
-            echo "no unpushed commits: nothing to judge"
+            # Only reachable when the branch has nothing main lacks -- a tag on an
+            # already-merged commit, for instance. Never on a branch with work on it.
+            echo "no commits ahead of ${BASE_REF:-<none>}: nothing to judge"
             exit 0
           fi
+          # Print what is being judged. A scan with no output is indistinguishable
+          # from no scan in a green log, and that ambiguity is how the previous
+          # revision went unnoticed while reporting success.
+          echo "judging $(printf '%s\n' "$shas" | wc -l) commit(s):"
+          printf '%s\n' "$shas" | while read -r c; do
+            git log -1 --format='  %h %s' "$c" 2>/dev/null || echo "  $c"
+          done
           # shellcheck disable=SC2086
           exec sh scripts/leak-scan.sh commits $shas
