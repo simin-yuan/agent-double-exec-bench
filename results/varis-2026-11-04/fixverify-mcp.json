@@ -1,0 +1,168 @@
+{
+  "scenario": "S3",
+  "criteria": "evidence-fixverify-20261104/PREDECLARED.md",
+  "started_utc": "2026-11-04T15:39:14Z",
+  "delay_seconds": 35,
+  "initialize": {
+    "http_status": 200,
+    "mcp_session": null,
+    "raw_head": "event: message\ndata: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":true}},\"serverInfo\":{\"name\":\"varis\",\"version\":\"1.0.0\"},\"instructions\":\"Varis is a marketplace of services an agent can call. Find a service with search_services, then call it with invoke_service, passing input that matches the input_schema from the search result. Follow a service's instructions wh"
+  },
+  "tools_list": {
+    "http_status": 200,
+    "count": 3,
+    "names": [
+      "search_services",
+      "invoke_service",
+      "get_invocation"
+    ],
+    "get_invocation_present": true,
+    "get_invocation_schema": {
+      "type": "object",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "properties": {
+        "invocation_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The invocation_id from an invoke_service result."
+        }
+      },
+      "required": [
+        "invocation_id"
+      ]
+    }
+  },
+  "calls": [
+    {
+      "index": 1,
+      "run_tag": "fixverify-s3-1",
+      "http_status": 200,
+      "elapsed_s": 23.615,
+      "is_error": null,
+      "status_field": "in_progress",
+      "invocation_id": "var_invk_rirpIn89EDjRvC",
+      "structured_keys": [
+        "estimated_completion_at",
+        "eta_in",
+        "idempotency_key",
+        "instruction",
+        "invocation_id",
+        "progress_percent",
+        "provider_message",
+        "request_id",
+        "retry_after_seconds",
+        "status"
+      ],
+      "raw_head": ": keepalive\n\nevent: message\ndata: {\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"status\\\":\\\"in_progress\\\",\\\"progress_percent\\\":null,\\\"estimated_completion_at\\\":null,\\\"eta_in\\\":null,\\\"provider_message\\\":null,\\\"retry_after_seconds\\\":30,\\\"instruction\\\":\\\"This call is still running. Call get_invocation with this invocation_id, or call invoke_service again with the same service_id, input, and idempotency_key, after retry_after_seconds. Once returned, the output can be fetched again for one hour.\\\",\\\"invocation_id\\\":\\\"var_invk_rirpIn89EDjRvC\\\",\\\"idempotency_key\\\":\\\"eec56c67-8b4f-400c-acad-3de9805b22a4\\\",\\\"request_id\\\":\\\"var_req_1fecb393-cbea-43fe-ac74-03c8453519cf\\\"}\"}],\"structuredContent\":{\"status\":\"in_progress\",\"progress_percent\":null,\"estimated_completion_at\":null,\"eta_in\":null,\"provider_message\":null,\"retry_after_seconds\":30,\"instruction\":\"This call is still running. Call get_invocation with this invocation_id, or call invoke_service again with the same service_id, input, and idempotency_key, after retry_after_seconds. Once returned, the output can be fetched again for one hour.\",\"invocation_id\":\"var_invk_rirpIn89EDjRvC\",\"idempotency_key\":\"eec56c67-8b4f-400c-acad-3de9805b22a4\",\"request_id\":\"var_req_1fecb393-cbea-43fe-ac74-03c8453519cf\"}},\"jsonrpc\":\"2.0\",\"id\":1}\n\n",
+      "lookups": [
+        {
+          "http_status": 200,
+          "elapsed_s": 1.764,
+          "status": "in_progress",
+          "has_output": false,
+          "is_error": null
+        },
+        {
+          "http_status": 200,
+          "elapsed_s": 1.617,
+          "status": "in_progress",
+          "has_output": false,
+          "is_error": null
+        },
+        {
+          "http_status": 200,
+          "elapsed_s": 1.791,
+          "status": "success",
+          "has_output": true,
+          "is_error": null
+        }
+      ],
+      "final_lookup": {
+        "http_status": 200,
+        "elapsed_s": 1.791,
+        "status": "success",
+        "has_output": true,
+        "is_error": null
+      },
+      "server": {
+        "received": 1,
+        "completed": 1,
+        "execution_ids": [
+          "mw2a8e7y-3-7c43435f"
+        ],
+        "invocation_ids": [
+          "var_invk_rirpIn89EDjRvC"
+        ],
+        "has_notification_token": [
+          true
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "run_tag": "fixverify-s3-2",
+      "http_status": 200,
+      "elapsed_s": 23.751,
+      "is_error": null,
+      "status_field": "in_progress",
+      "invocation_id": "var_invk_Mc42FHnXEYU9Z3",
+      "structured_keys": [
+        "estimated_completion_at",
+        "eta_in",
+        "idempotency_key",
+        "instruction",
+        "invocation_id",
+        "progress_percent",
+        "provider_message",
+        "request_id",
+        "retry_after_seconds",
+        "status"
+      ],
+      "raw_head": ": keepalive\n\nevent: message\ndata: {\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"status\\\":\\\"in_progress\\\",\\\"progress_percent\\\":null,\\\"estimated_completion_at\\\":null,\\\"eta_in\\\":null,\\\"provider_message\\\":null,\\\"retry_after_seconds\\\":30,\\\"instruction\\\":\\\"This call is still running. Call get_invocation with this invocation_id, or call invoke_service again with the same service_id, input, and idempotency_key, after retry_after_seconds. Once returned, the output can be fetched again for one hour.\\\",\\\"invocation_id\\\":\\\"var_invk_Mc42FHnXEYU9Z3\\\",\\\"idempotency_key\\\":\\\"70091092-dc21-4b58-bed8-72bc3ee36f34\\\",\\\"request_id\\\":\\\"var_req_46c4129e-ec9e-45dd-ac4b-7a35ab4a146e\\\"}\"}],\"structuredContent\":{\"status\":\"in_progress\",\"progress_percent\":null,\"estimated_completion_at\":null,\"eta_in\":null,\"provider_message\":null,\"retry_after_seconds\":30,\"instruction\":\"This call is still running. Call get_invocation with this invocation_id, or call invoke_service again with the same service_id, input, and idempotency_key, after retry_after_seconds. Once returned, the output can be fetched again for one hour.\",\"invocation_id\":\"var_invk_Mc42FHnXEYU9Z3\",\"idempotency_key\":\"70091092-dc21-4b58-bed8-72bc3ee36f34\",\"request_id\":\"var_req_46c4129e-ec9e-45dd-ac4b-7a35ab4a146e\"}},\"jsonrpc\":\"2.0\",\"id\":1}\n\n",
+      "lookups": [
+        {
+          "http_status": 200,
+          "elapsed_s": 1.699,
+          "status": "in_progress",
+          "has_output": false,
+          "is_error": null
+        },
+        {
+          "http_status": 200,
+          "elapsed_s": 1.643,
+          "status": "in_progress",
+          "has_output": false,
+          "is_error": null
+        },
+        {
+          "http_status": 200,
+          "elapsed_s": 2.165,
+          "status": "success",
+          "has_output": true,
+          "is_error": null
+        }
+      ],
+      "final_lookup": {
+        "http_status": 200,
+        "elapsed_s": 2.165,
+        "status": "success",
+        "has_output": true,
+        "is_error": null
+      },
+      "server": {
+        "received": 1,
+        "completed": 1,
+        "execution_ids": [
+          "mw2a9dtm-4-9370d65e"
+        ],
+        "invocation_ids": [
+          "var_invk_Mc42FHnXEYU9Z3"
+        ],
+        "has_notification_token": [
+          true
+        ]
+      }
+    }
+  ],
+  "finished_utc": "2026-11-04T15:40:54Z"
+}

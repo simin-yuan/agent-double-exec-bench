@@ -1,0 +1,1506 @@
+{
+  "started_at": "2026-11-04T14:48:14Z",
+  "delay_seconds": 35,
+  "client_timeout_s": 150.0,
+  "service_id_suffix": "Ba4NeR",
+  "agent_key_prefix": "var_ak_zsjR...",
+  "s1": [
+    {
+      "scenario": "S1",
+      "index": 1,
+      "run_tag": "fixverify-s1-1",
+      "invoke": {
+        "url": "https://api.usevaris.com/v1/invocations",
+        "method": "POST",
+        "idempotency_key": "a62ced51-e8ff-4d35-90a5-a8c6433a76dc",
+        "status": 202,
+        "elapsed_s": 27.596,
+        "error_code": null,
+        "transport_error": null,
+        "body": {
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "status": "in_progress",
+          "progress_percent": null,
+          "estimated_completion_at": null,
+          "eta_in": null,
+          "provider_message": null,
+          "retry_after_seconds": 30,
+          "instruction": "This call is still running. Retry POST /v1/invocations with the same service_id, input, and Idempotency-Key, or call GET /v1/invocations/var_invk_v9GzB12LNqL6g6, after retry_after_seconds. Once returned, the output can be fetched again for one hour.",
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+        },
+        "response_headers": {
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 14:48:38 GMT",
+          "retry-after": "30",
+          "strict-transport-security": "max-age=63072000",
+          "x-matched-path": "/api/v1/invocations",
+          "x-nextjs-rewritten-path": "/api/v1/invocations",
+          "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+          "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+        "invocation_id": "var_invk_v9GzB12LNqL6g6",
+        "replayed": null
+      },
+      "lookups": [
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 202,
+          "elapsed_s": 1.879,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "in_progress",
+            "replayed": true,
+            "progress_percent": null,
+            "estimated_completion_at": null,
+            "eta_in": null,
+            "provider_message": null,
+            "retry_after_seconds": 30,
+            "instruction": "This call is still running. Retry POST /v1/invocations with the same service_id, input, and Idempotency-Key, or call GET /v1/invocations/var_invk_v9GzB12LNqL6g6, after retry_after_seconds. Once returned, the output can be fetched again for one hour.",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:48:45 GMT",
+            "retry-after": "30",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 202,
+          "elapsed_s": 2.493,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "in_progress",
+            "replayed": true,
+            "progress_percent": null,
+            "estimated_completion_at": null,
+            "eta_in": null,
+            "provider_message": null,
+            "retry_after_seconds": 30,
+            "instruction": "This call is still running. Retry POST /v1/invocations with the same service_id, input, and Idempotency-Key, or call GET /v1/invocations/var_invk_v9GzB12LNqL6g6, after retry_after_seconds. Once returned, the output can be fetched again for one hour.",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:48:52 GMT",
+            "retry-after": "30",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.787,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:48:59 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.973,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:06 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.414,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:13 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.042,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:20 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.54,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:28 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.129,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:35 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 4.503,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:45 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.065,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:52 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.834,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:49:58 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.225,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:50:06 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.934,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_v9GzB12LNqL6g6",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28enfj-1-b2f9fc33",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+                "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-1",
+              "received_at": "2026-11-04T14:48:16.471Z",
+              "completed_at": "2026-11-04T14:48:52.698Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:48:54.174853+00:00",
+            "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:50:13 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+            "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+            "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "replayed": true
+        }
+      ],
+      "final_lookup": {
+        "url": "https://api.usevaris.com/v1/invocations/var_invk_v9GzB12LNqL6g6",
+        "method": "GET",
+        "idempotency_key": null,
+        "status": 200,
+        "elapsed_s": 1.934,
+        "error_code": null,
+        "transport_error": null,
+        "body": {
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "status": "success",
+          "replayed": true,
+          "output": {
+            "execution_id": "mw28enfj-1-b2f9fc33",
+            "received_headers": {
+              "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+              "content-length": "47",
+              "accept": "application/json",
+              "content-type": "application/json",
+              "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+              "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+            },
+            "delay_seconds": 35,
+            "run_tag": "fixverify-s1-1",
+            "received_at": "2026-11-04T14:48:16.471Z",
+            "completed_at": "2026-11-04T14:48:52.698Z",
+            "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+          },
+          "completed_at": "2026-11-04T14:48:54.174853+00:00",
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+        },
+        "response_headers": {
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 14:50:13 GMT",
+          "strict-transport-security": "max-age=63072000",
+          "x-matched-path": "/api/v1/invocations/[invocation_id]",
+          "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_v9GzB12LNqL6g6",
+          "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+          "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+        "invocation_id": "var_invk_v9GzB12LNqL6g6",
+        "replayed": true
+      }
+    },
+    {
+      "scenario": "S1",
+      "index": 2,
+      "run_tag": "fixverify-s1-2",
+      "invoke": {
+        "url": "https://api.usevaris.com/v1/invocations",
+        "method": "POST",
+        "idempotency_key": "60ea9f67-ab89-4199-8316-50c6725b28cd",
+        "status": 202,
+        "elapsed_s": 24.228,
+        "error_code": null,
+        "transport_error": null,
+        "body": {
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "status": "in_progress",
+          "progress_percent": null,
+          "estimated_completion_at": null,
+          "eta_in": null,
+          "provider_message": null,
+          "retry_after_seconds": 30,
+          "instruction": "This call is still running. Retry POST /v1/invocations with the same service_id, input, and Idempotency-Key, or call GET /v1/invocations/var_invk_z5eFZqpkjd102x, after retry_after_seconds. Once returned, the output can be fetched again for one hour.",
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+        },
+        "response_headers": {
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 14:50:39 GMT",
+          "retry-after": "30",
+          "strict-transport-security": "max-age=63072000",
+          "x-matched-path": "/api/v1/invocations",
+          "x-nextjs-rewritten-path": "/api/v1/invocations",
+          "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+          "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+        "invocation_id": "var_invk_z5eFZqpkjd102x",
+        "replayed": null
+      },
+      "lookups": [
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 202,
+          "elapsed_s": 2.362,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "in_progress",
+            "replayed": true,
+            "progress_percent": null,
+            "estimated_completion_at": null,
+            "eta_in": null,
+            "provider_message": null,
+            "retry_after_seconds": 30,
+            "instruction": "This call is still running. Retry POST /v1/invocations with the same service_id, input, and Idempotency-Key, or call GET /v1/invocations/var_invk_z5eFZqpkjd102x, after retry_after_seconds. Once returned, the output can be fetched again for one hour.",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:50:46 GMT",
+            "retry-after": "30",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 202,
+          "elapsed_s": 2.174,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "in_progress",
+            "replayed": true,
+            "progress_percent": null,
+            "estimated_completion_at": null,
+            "eta_in": null,
+            "provider_message": null,
+            "retry_after_seconds": 30,
+            "instruction": "This call is still running. Retry POST /v1/invocations with the same service_id, input, and Idempotency-Key, or call GET /v1/invocations/var_invk_z5eFZqpkjd102x, after retry_after_seconds. Once returned, the output can be fetched again for one hour.",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:50:54 GMT",
+            "retry-after": "30",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.344,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:01 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.066,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:08 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.319,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:15 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.641,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:23 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.077,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:30 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.139,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:37 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.892,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:44 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.783,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:51 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.615,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:51:58 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 1.928,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:52:05 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        },
+        {
+          "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "method": "GET",
+          "idempotency_key": null,
+          "status": 200,
+          "elapsed_s": 2.254,
+          "error_code": null,
+          "transport_error": null,
+          "body": {
+            "invocation_id": "var_invk_z5eFZqpkjd102x",
+            "status": "success",
+            "replayed": true,
+            "output": {
+              "execution_id": "mw28h90d-2-170788db",
+              "received_headers": {
+                "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+                "content-length": "47",
+                "accept": "application/json",
+                "content-type": "application/json",
+                "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+                "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+              },
+              "delay_seconds": 35,
+              "run_tag": "fixverify-s1-2",
+              "received_at": "2026-11-04T14:50:18.972Z",
+              "completed_at": "2026-11-04T14:50:53.981Z",
+              "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+            },
+            "completed_at": "2026-11-04T14:50:55.588765+00:00",
+            "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+          },
+          "response_headers": {
+            "cache-control": "public, max-age=0, must-revalidate",
+            "content-type": "application/json",
+            "date": "Wed, 04 Nov 2026 14:52:12 GMT",
+            "strict-transport-security": "max-age=63072000",
+            "x-matched-path": "/api/v1/invocations/[invocation_id]",
+            "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+            "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+            "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+            "connection": "close",
+            "transfer-encoding": "chunked"
+          },
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "replayed": true
+        }
+      ],
+      "final_lookup": {
+        "url": "https://api.usevaris.com/v1/invocations/var_invk_z5eFZqpkjd102x",
+        "method": "GET",
+        "idempotency_key": null,
+        "status": 200,
+        "elapsed_s": 2.254,
+        "error_code": null,
+        "transport_error": null,
+        "body": {
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "status": "success",
+          "replayed": true,
+          "output": {
+            "execution_id": "mw28h90d-2-170788db",
+            "received_headers": {
+              "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+              "content-length": "47",
+              "accept": "application/json",
+              "content-type": "application/json",
+              "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+              "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+            },
+            "delay_seconds": 35,
+            "run_tag": "fixverify-s1-2",
+            "received_at": "2026-11-04T14:50:18.972Z",
+            "completed_at": "2026-11-04T14:50:53.981Z",
+            "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+          },
+          "completed_at": "2026-11-04T14:50:55.588765+00:00",
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+        },
+        "response_headers": {
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 14:52:12 GMT",
+          "strict-transport-security": "max-age=63072000",
+          "x-matched-path": "/api/v1/invocations/[invocation_id]",
+          "x-nextjs-rewritten-path": "/api/v1/invocations/var_invk_z5eFZqpkjd102x",
+          "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+          "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+        "invocation_id": "var_invk_z5eFZqpkjd102x",
+        "replayed": true
+      }
+    }
+  ],
+  "s1b": [
+    {
+      "scenario": "S1b",
+      "index": 1,
+      "run_tag": "fixverify-s1-1-retry",
+      "retry": {
+        "url": "https://api.usevaris.com/v1/invocations",
+        "method": "POST",
+        "idempotency_key": "a62ced51-e8ff-4d35-90a5-a8c6433a76dc",
+        "status": 200,
+        "elapsed_s": 2.393,
+        "error_code": null,
+        "transport_error": null,
+        "body": {
+          "invocation_id": "var_invk_v9GzB12LNqL6g6",
+          "status": "success",
+          "replayed": true,
+          "output": {
+            "execution_id": "mw28enfj-1-b2f9fc33",
+            "received_headers": {
+              "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+              "content-length": "47",
+              "accept": "application/json",
+              "content-type": "application/json",
+              "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+              "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+            },
+            "delay_seconds": 35,
+            "run_tag": "fixverify-s1-1",
+            "received_at": "2026-11-04T14:48:16.471Z",
+            "completed_at": "2026-11-04T14:48:52.698Z",
+            "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+          },
+          "completed_at": "2026-11-04T14:48:54.174853+00:00",
+          "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f"
+        },
+        "response_headers": {
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 14:50:15 GMT",
+          "strict-transport-security": "max-age=63072000",
+          "x-matched-path": "/api/v1/invocations",
+          "x-nextjs-rewritten-path": "/api/v1/invocations",
+          "x-varis-invocation-id": "var_invk_v9GzB12LNqL6g6",
+          "x-varis-request-id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "request_id": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+        "invocation_id": "var_invk_v9GzB12LNqL6g6",
+        "replayed": true
+      }
+    },
+    {
+      "scenario": "S1b",
+      "index": 2,
+      "run_tag": "fixverify-s1-2-retry",
+      "retry": {
+        "url": "https://api.usevaris.com/v1/invocations",
+        "method": "POST",
+        "idempotency_key": "60ea9f67-ab89-4199-8316-50c6725b28cd",
+        "status": 200,
+        "elapsed_s": 1.781,
+        "error_code": null,
+        "transport_error": null,
+        "body": {
+          "invocation_id": "var_invk_z5eFZqpkjd102x",
+          "status": "success",
+          "replayed": true,
+          "output": {
+            "execution_id": "mw28h90d-2-170788db",
+            "received_headers": {
+              "user-agent": "Varis-Gateway/1 (+https://api.usevaris.com)",
+              "content-length": "47",
+              "accept": "application/json",
+              "content-type": "application/json",
+              "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+              "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+            },
+            "delay_seconds": 35,
+            "run_tag": "fixverify-s1-2",
+            "received_at": "2026-11-04T14:50:18.972Z",
+            "completed_at": "2026-11-04T14:50:53.981Z",
+            "note": "work finished after the 30s gateway window; what the platform did with it is the measurement"
+          },
+          "completed_at": "2026-11-04T14:50:55.588765+00:00",
+          "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638"
+        },
+        "response_headers": {
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 14:52:14 GMT",
+          "strict-transport-security": "max-age=63072000",
+          "x-matched-path": "/api/v1/invocations",
+          "x-nextjs-rewritten-path": "/api/v1/invocations",
+          "x-varis-invocation-id": "var_invk_z5eFZqpkjd102x",
+          "x-varis-request-id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "request_id": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+        "invocation_id": "var_invk_z5eFZqpkjd102x",
+        "replayed": true
+      }
+    }
+  ],
+  "s2": [
+    {
+      "index": 1,
+      "request_id_first": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+      "request_id_retry": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+      "request_id_same": true,
+      "invocation_id_first": "var_invk_v9GzB12LNqL6g6",
+      "invocation_id_retry": "var_invk_v9GzB12LNqL6g6",
+      "invocation_id_same": true,
+      "x_varis_request_id_first": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+      "x_varis_request_id_retry": "var_req_7d873944-210c-42a9-bd3a-bf1e99c92d1f",
+      "x_varis_invocation_id_first": "var_invk_v9GzB12LNqL6g6",
+      "x_varis_invocation_id_retry": "var_invk_v9GzB12LNqL6g6"
+    },
+    {
+      "index": 2,
+      "request_id_first": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+      "request_id_retry": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+      "request_id_same": true,
+      "invocation_id_first": "var_invk_z5eFZqpkjd102x",
+      "invocation_id_retry": "var_invk_z5eFZqpkjd102x",
+      "invocation_id_same": true,
+      "x_varis_request_id_first": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+      "x_varis_request_id_retry": "var_req_11ae2385-9c6a-4ea1-be80-7909e5c33638",
+      "x_varis_invocation_id_first": "var_invk_z5eFZqpkjd102x",
+      "x_varis_invocation_id_retry": "var_invk_z5eFZqpkjd102x"
+    }
+  ],
+  "finished_at": "2026-11-04T14:52:17Z"
+}

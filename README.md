@@ -40,6 +40,31 @@ NeMo Agent Toolkit row (added 2026-11-03): The model is the same local fake Open
 
 Full table, every cell next to its log: [results/SUMMARY.md](results/SUMMARY.md). Method and caveats: [REPORT.md](REPORT.md).
 
+## Call-layer verification: Varis
+
+Not a row in the table above, and not comparable to it. The table counts requests an
+**agent framework** sends when the **model API** fails; this counts what a **calling
+layer** does when the **service it calls** is slow. Same question, different unit — a
+platform cannot be ranked against a framework, and putting it in the table would imply
+a comparison that does not exist.
+
+On 4 November 2026 Varis shipped SDK 1.2.0, replacing the request timeout with
+`202 in_progress` plus an `invocation_id` you collect from afterwards. We had reported
+the behaviour this replaces. Re-run against the release: **it works** — the service ran
+once per call, the agent was charged once, the provider was paid once, and a same-key
+retry returned the cached result without re-running anything. The MCP path behaves the
+same way.
+
+Criteria were written and committed before the first call, not after the numbers were
+in. Results, timestamps and the scrubbed raw records:
+[results/varis-2026-11-04](results/varis-2026-11-04/). Adapter, for any service you
+publish there: [harness/varis](harness/varis/).
+
+**The one mistake here that costs money:** a retry is a retry only if it carries the
+same `Idempotency-Key`. A second request with a fresh key is a new invocation — the
+service runs again and you are billed again. Our own first draft of the adapter did
+exactly that. It would have reported a clean pass while charging the user twice.
+
 ## Rerun
 `harness/` contains the fault server and one runner per framework; `results/` holds the raw logs. The
 `agent_pkg` field records a relative sandbox path: absolute build paths from the machine the runs were
