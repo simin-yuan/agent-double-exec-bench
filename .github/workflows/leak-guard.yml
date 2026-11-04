@@ -48,7 +48,26 @@ jobs:
             exec sh scripts/leak-scan.sh range "$range"
           fi
 
-          echo "new branch or first push: judging the commits we authored"
-          shas=$(git rev-list --no-merges -n 200 "$HEAD_SHA")
+          # New branch, or a first push with no `before` to diff against. Judge what
+          # the remote does not already have -- the same rule the pre-push hook uses
+          # (`git rev-list "$local_sha" --not --remotes`).
+          #
+          # This used to be `git rev-list --no-merges -n 200`, which on a branch cut
+          # from main reached back through commits that were already published, so the
+          # first push of every branch failed on history it had not created.
+          #
+          # If --remotes resolves to nothing (no remote-tracking refs fetched), this
+          # falls back to the whole history: noisy, but never quieter than before.
+          echo "new branch or first push: judging commits the remote does not have"
+          if ! shas=$(git rev-list --no-merges "$HEAD_SHA" --not --remotes); then
+            echo "rev-list failed; refusing to judge" >&2
+            exit 1
+          fi
+          if [ -z "$shas" ]; then
+            # Nothing unpushed means nothing new is being published -- a tag on an
+            # already-pushed commit, for instance. The hook lets this through too.
+            echo "no unpushed commits: nothing to judge"
+            exit 0
+          fi
           # shellcheck disable=SC2086
           exec sh scripts/leak-scan.sh commits $shas
