@@ -92,5 +92,12 @@ jobs:
             echo "no commits ahead of ${BASE_REF:-<none>}: nothing to judge"
             exit 0
           fi
+          # Print what is being judged. A scan with no output is indistinguishable
+          # from no scan in a green log, and that ambiguity is how the previous
+          # revision went unnoticed while reporting success.
+          echo "judging $(printf '%s\n' "$shas" | wc -l) commit(s):"
+          printf '%s\n' "$shas" | while read -r c; do
+            git log -1 --format='  %h %s' "$c" 2>/dev/null || echo "  $c"
+          done
           # shellcheck disable=SC2086
           exec sh scripts/leak-scan.sh commits $shas
